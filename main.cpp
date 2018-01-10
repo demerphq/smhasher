@@ -365,6 +365,14 @@ HashInfo g_hashes[] =
     NULL, xxHash64_with_state_test },
 #endif
 #if defined(__x86_64__)
+  { "jodyhash32", "JodyHash for 32 bit (v5)",
+    32, 32, 32, 0xFB47D60D,
+    NULL, jodyhash32_test },
+  { "jodyhash64", "JodyHash for 64 bit (v5)",
+    64, 64, 64, 0xFB47D60D,
+    NULL, jodyhash32_test },
+#endif
+#if defined(__x86_64__)
   { "metrohash64_1", "MetroHash64_1 for 64-bit",
     64, 64, 64, 0x65BF19EE,
     NULL, metrohash64_1_with_state_test },
@@ -377,6 +385,7 @@ HashInfo g_hashes[] =
   { "metrohash128_2", "MetroHash128_2 for 64-bit",
     64, 64, 128, 0x2EFAD245,
     NULL, metrohash128_2_with_state_test },
+#endif
 #if defined(__SSE4_2__) && defined(__x86_64__)
   { "metrohash64crc_1", "MetroHash64crc_1 for x64",
     64, 64, 64, 0x2B7B5BD7,
@@ -390,7 +399,6 @@ HashInfo g_hashes[] =
   { "metrohash128crc_2", "MetroHash128crc_2 for x64",
     64, 64, 128, 0xA3773542,
     NULL, metrohash128crc_2_with_state_test },
-#endif
 #endif
 #if defined(__x86_64__)
   { "cmetrohash64_1o", "cmetrohash64_1 (shorter key optimized) , 64-bit for x64",

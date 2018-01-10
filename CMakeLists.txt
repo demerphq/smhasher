@@ -194,6 +194,10 @@ add_library(SMHasherSupport
   ${SSE4_SRC1}
   ${SSE4_SRC}
   ${TSIP_SRC}
+  t1ha.c
+  mum.cc
+  jody_hash32.c
+  jody_hash64.c
 )
 
 add_executable(
