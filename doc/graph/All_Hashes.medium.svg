@@ -1771,16 +1771,44 @@ onclick="gnuplot_svg.toggleCoordBox(evt)"  onmousemove="gnuplot_svg.moveCoordBox
 		L742.6,172.8 L784.3,169.7 L826.1,169.8 L867.9,169.8 L909.7,171.2 L951.5,168.0 L993.2,168.2 L1035.0,168.1
 		L1076.8,169.6  '/></g>
 	</g>
-	<g id="lookup3" ><title>lookup3</title>
+	<g id="jodyhash32" ><title>jodyhash32</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g id="lookup3_keyentry" visibility="visible" onclick="gnuplot_svg.toggleVisibility(evt,'lookup3')">
+	<g id="jodyhash32_keyentry" visibility="visible" onclick="gnuplot_svg.toggleVisibility(evt,'jodyhash32')">
 	<g transform="translate(860.8,274.5)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
-		<text><tspan font-family="mono" >lookup3</tspan></text>
+		<text><tspan font-family="mono" >jodyhash32</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<path stroke='rgb( 86, 180, 233)'  d='M868.5,270.4 L907.5,270.4  '/>	</g>
-	<path stroke='rgb( 86, 180, 233)'  d='M74.1,182.5 L115.9,182.5 L157.7,181.7 L199.4,181.7 L241.2,181.6 L283.0,180.9 L324.8,180.9 L366.6,180.8
+	<path stroke='rgb( 86, 180, 233)'  d='M74.1,181.4 L115.9,181.0 L157.7,180.5 L199.4,180.0 L241.2,179.6 L283.0,179.1 L324.8,178.7 L366.6,178.2
+		L408.3,177.8 L450.1,177.3 L491.9,176.9 L533.7,176.4 L575.5,176.0 L617.2,175.5 L659.0,175.1 L700.8,174.6
+		L742.6,174.1 L784.3,173.7 L826.1,173.2 L867.9,172.8 L909.7,172.3 L951.5,171.9 L993.2,171.4 L1035.0,171.0
+		L1076.8,170.5  '/></g>
+	</g>
+	<g id="jodyhash64" ><title>jodyhash64</title>
+<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g id="jodyhash64_keyentry" visibility="visible" onclick="gnuplot_svg.toggleVisibility(evt,'jodyhash64')">
+	<g transform="translate(860.8,290.9)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
+		<text><tspan font-family="mono" >jodyhash64</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(230, 159,   0)'  d='M868.5,286.8 L907.5,286.8  '/>	</g>
+	<path stroke='rgb(230, 159,   0)'  d='M74.1,183.2 L115.9,182.8 L157.7,182.7 L199.4,182.4 L241.2,182.3 L283.0,181.9 L324.8,181.9 L366.6,181.4
+		L408.3,181.4 L450.1,181.0 L491.9,180.9 L533.7,180.6 L575.5,180.5 L617.2,180.1 L659.0,180.0 L700.8,179.6
+		L742.6,179.6 L784.3,179.2 L826.1,179.2 L867.9,178.7 L909.7,178.7 L951.5,178.3 L993.2,178.2 L1035.0,177.8
+		L1076.8,177.8  '/></g>
+	</g>
+	<g id="lookup3" ><title>lookup3</title>
+<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g id="lookup3_keyentry" visibility="visible" onclick="gnuplot_svg.toggleVisibility(evt,'lookup3')">
+	<g transform="translate(860.8,307.3)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
+		<text><tspan font-family="mono" >lookup3</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(240, 228,  66)'  d='M868.5,303.2 L907.5,303.2  '/>	</g>
+	<path stroke='rgb(240, 228,  66)'  d='M74.1,182.5 L115.9,182.5 L157.7,181.7 L199.4,181.7 L241.2,181.6 L283.0,180.9 L324.8,180.9 L366.6,180.8
 		L408.3,180.1 L450.1,180.1 L491.9,180.0 L533.7,179.3 L575.5,179.3 L617.2,179.1 L659.0,178.5 L700.8,178.5
 		L742.6,178.3 L784.3,177.7 L826.1,177.7 L867.9,177.5 L909.7,176.9 L951.5,176.9 L993.2,176.7 L1035.0,176.1
 		L1076.8,176.0  '/></g>
@@ -1788,13 +1816,13 @@ onclick="gnuplot_svg.toggleCoordBox(evt)"  onmousemove="gnuplot_svg.moveCoordBox
 	<g id="md5_128a" ><title>md5128a</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g id="md5_128a_keyentry" visibility="visible" onclick="gnuplot_svg.toggleVisibility(evt,'md5_128a')">
-	<g transform="translate(860.8,290.9)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
+	<g transform="translate(860.8,323.7)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
 		<text><tspan font-family="mono" >md5</tspan><tspan font-family="mono"  font-size="8.8" dy="3.30px">1</tspan><tspan font-family="mono"  font-size="11.0" dy="-3.30px">28a</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(230, 159,   0)'  d='M868.5,286.8 L907.5,286.8  '/>	</g>
-	<path stroke='rgb(230, 159,   0)'  d='M74.1,154.3 L115.9,154.1 L157.7,154.1 L199.4,153.8 L241.2,153.8 L283.0,153.8 L324.8,127.5 L366.6,126.2
+	<path stroke='rgb(  0, 114, 178)'  d='M868.5,319.6 L907.5,319.6  '/>	</g>
+	<path stroke='rgb(  0, 114, 178)'  d='M74.1,154.3 L115.9,154.1 L157.7,154.1 L199.4,153.8 L241.2,153.8 L283.0,153.8 L324.8,127.5 L366.6,126.2
 		L408.3,128.0 L450.1,127.7 L491.9,126.3 L533.7,127.7 L575.5,127.8 L617.2,127.0 L659.0,126.4 L700.8,127.8
 		L742.6,127.9 L784.3,127.8 L826.1,127.8 L867.9,127.8 L909.7,127.8 L951.5,127.8 L993.2,100.2 L1035.0,98.7
 		L1076.8,99.4  '/></g>
@@ -1802,13 +1830,13 @@ onclick="gnuplot_svg.toggleCoordBox(evt)"  onmousemove="gnuplot_svg.moveCoordBox
 	<g id="md5_32a" ><title>md532a</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g id="md5_32a_keyentry" visibility="visible" onclick="gnuplot_svg.toggleVisibility(evt,'md5_32a')">
-	<g transform="translate(860.8,307.3)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
+	<g transform="translate(860.8,340.1)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
 		<text><tspan font-family="mono" >md5</tspan><tspan font-family="mono"  font-size="8.8" dy="3.30px">3</tspan><tspan font-family="mono"  font-size="11.0" dy="-3.30px">2a</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(240, 228,  66)'  d='M868.5,303.2 L907.5,303.2  '/>	</g>
-	<path stroke='rgb(240, 228,  66)'  d='M74.1,153.7 L115.9,153.7 L157.7,153.6 L199.4,153.3 L241.2,153.9 L283.0,154.0 L324.8,126.8 L366.6,126.7
+	<path stroke='rgb(229,  30,  16)'  d='M868.5,336.0 L907.5,336.0  '/>	</g>
+	<path stroke='rgb(229,  30,  16)'  d='M74.1,153.7 L115.9,153.7 L157.7,153.6 L199.4,153.3 L241.2,153.9 L283.0,154.0 L324.8,126.8 L366.6,126.7
 		L408.3,127.3 L450.1,127.0 L491.9,126.9 L533.7,127.1 L575.5,126.6 L617.2,127.6 L659.0,126.8 L700.8,127.7
 		L742.6,127.0 L784.3,127.1 L826.1,127.6 L867.9,127.6 L909.7,127.6 L951.5,127.6 L993.2,100.8 L1035.0,100.0
 		L1076.8,101.6  '/></g>
@@ -1816,13 +1844,13 @@ onclick="gnuplot_svg.toggleCoordBox(evt)"  onmousemove="gnuplot_svg.moveCoordBox
 	<g id="metrohash128_1" ><title>metrohash1281</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g id="metrohash128_1_keyentry" visibility="visible" onclick="gnuplot_svg.toggleVisibility(evt,'metrohash128_1')">
-	<g transform="translate(860.8,323.7)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
+	<g transform="translate(860.8,356.5)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
 		<text><tspan font-family="mono" >metrohash128</tspan><tspan font-family="mono"  font-size="8.8" dy="3.30px">1</tspan><tspan font-size="11.0" dy="-3.30"></tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0, 114, 178)'  d='M868.5,319.6 L907.5,319.6  '/>	</g>
-	<path stroke='rgb(  0, 114, 178)'  d='M74.1,182.2 L115.9,181.5 L157.7,181.6 L199.4,181.4 L241.2,181.2 L283.0,180.6 L324.8,180.7 L366.6,180.5
+	<path stroke='rgb(  0,   0,   0)'  d='M868.5,352.4 L907.5,352.4  '/>	</g>
+	<path stroke='rgb(  0,   0,   0)'  d='M74.1,182.2 L115.9,181.5 L157.7,181.6 L199.4,181.4 L241.2,181.2 L283.0,180.6 L324.8,180.7 L366.6,180.5
 		L408.3,181.8 L450.1,181.1 L491.9,181.1 L533.7,181.0 L575.5,180.9 L617.2,180.2 L659.0,180.4 L700.8,180.2
 		L742.6,181.4 L784.3,180.9 L826.1,180.9 L867.9,180.8 L909.7,180.6 L951.5,180.0 L993.2,180.1 L1035.0,179.9
 		L1076.8,181.3  '/></g>
@@ -1830,13 +1858,13 @@ onclick="gnuplot_svg.toggleCoordBox(evt)"  onmousemove="gnuplot_svg.moveCoordBox
 	<g id="metrohash128_2" ><title>metrohash1282</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g id="metrohash128_2_keyentry" visibility="visible" onclick="gnuplot_svg.toggleVisibility(evt,'metrohash128_2')">
-	<g transform="translate(860.8,340.1)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
+	<g transform="translate(860.8,372.9)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
 		<text><tspan font-family="mono" >metrohash128</tspan><tspan font-family="mono"  font-size="8.8" dy="3.30px">2</tspan><tspan font-size="11.0" dy="-3.30"></tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(229,  30,  16)'  d='M868.5,336.0 L907.5,336.0  '/>	</g>
-	<path stroke='rgb(229,  30,  16)'  d='M74.1,182.2 L115.9,181.5 L157.7,181.6 L199.4,181.4 L241.2,181.2 L283.0,180.6 L324.8,180.7 L366.6,180.5
+	<path stroke='rgb(148,   0, 211)'  d='M868.5,368.8 L907.5,368.8  '/>	</g>
+	<path stroke='rgb(148,   0, 211)'  d='M74.1,182.2 L115.9,181.5 L157.7,181.6 L199.4,181.4 L241.2,181.2 L283.0,180.6 L324.8,180.7 L366.6,180.5
 		L408.3,181.8 L450.1,181.1 L491.9,181.1 L533.7,181.0 L575.5,180.9 L617.2,180.3 L659.0,180.4 L700.8,180.2
 		L742.6,181.4 L784.3,180.9 L826.1,180.9 L867.9,180.8 L909.7,180.6 L951.5,180.0 L993.2,180.1 L1035.0,179.9
 		L1076.8,181.2  '/></g>
@@ -1844,13 +1872,13 @@ onclick="gnuplot_svg.toggleCoordBox(evt)"  onmousemove="gnuplot_svg.moveCoordBox
 	<g id="metrohash128crc_1" ><title>metrohash128crc1</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g id="metrohash128crc_1_keyentry" visibility="visible" onclick="gnuplot_svg.toggleVisibility(evt,'metrohash128crc_1')">
-	<g transform="translate(860.8,356.5)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
+	<g transform="translate(860.8,389.3)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
 		<text><tspan font-family="mono" >metrohash128crc</tspan><tspan font-family="mono"  font-size="8.8" dy="3.30px">1</tspan><tspan font-size="11.0" dy="-3.30"></tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M868.5,352.4 L907.5,352.4  '/>	</g>
-	<path stroke='rgb(  0,   0,   0)'  d='M74.1,182.5 L115.9,182.0 L157.7,181.9 L199.4,181.4 L241.2,181.6 L283.0,181.0 L324.8,181.0 L366.6,180.4
+	<path stroke='rgb(  0, 158, 115)'  d='M868.5,385.2 L907.5,385.2  '/>	</g>
+	<path stroke='rgb(  0, 158, 115)'  d='M74.1,182.5 L115.9,182.0 L157.7,181.9 L199.4,181.4 L241.2,181.6 L283.0,181.0 L324.8,181.0 L366.6,180.4
 		L408.3,182.3 L450.1,181.7 L491.9,181.7 L533.7,181.1 L575.5,181.3 L617.2,180.7 L659.0,180.8 L700.8,180.2
 		L742.6,182.0 L784.3,181.5 L826.1,181.5 L867.9,180.9 L909.7,181.1 L951.5,180.5 L993.2,180.5 L1035.0,180.0
 		L1076.8,181.8  '/></g>
@@ -1858,13 +1886,13 @@ onclick="gnuplot_svg.toggleCoordBox(evt)"  onmousemove="gnuplot_svg.moveCoordBox
 	<g id="metrohash128crc_2" ><title>metrohash128crc2</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g id="metrohash128crc_2_keyentry" visibility="visible" onclick="gnuplot_svg.toggleVisibility(evt,'metrohash128crc_2')">
-	<g transform="translate(860.8,372.9)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
+	<g transform="translate(860.8,405.7)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
 		<text><tspan font-family="mono" >metrohash128crc</tspan><tspan font-family="mono"  font-size="8.8" dy="3.30px">2</tspan><tspan font-size="11.0" dy="-3.30"></tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(148,   0, 211)'  d='M868.5,368.8 L907.5,368.8  '/>	</g>
-	<path stroke='rgb(148,   0, 211)'  d='M74.1,182.5 L115.9,182.0 L157.7,181.9 L199.4,181.4 L241.2,181.6 L283.0,181.0 L324.8,181.0 L366.6,180.4
+	<path stroke='rgb( 86, 180, 233)'  d='M868.5,401.6 L907.5,401.6  '/>	</g>
+	<path stroke='rgb( 86, 180, 233)'  d='M74.1,182.5 L115.9,182.0 L157.7,181.9 L199.4,181.4 L241.2,181.6 L283.0,181.0 L324.8,181.0 L366.6,180.4
 		L408.3,182.3 L450.1,181.7 L491.9,181.7 L533.7,181.1 L575.5,181.3 L617.2,180.7 L659.0,180.8 L700.8,180.2
 		L742.6,182.0 L784.3,181.5 L826.1,181.5 L867.9,180.9 L909.7,181.1 L951.5,180.5 L993.2,180.5 L1035.0,180.0
 		L1076.8,181.8  '/></g>
@@ -1872,13 +1900,13 @@ onclick="gnuplot_svg.toggleCoordBox(evt)"  onmousemove="gnuplot_svg.moveCoordBox
 	<g id="metrohash64_1" ><title>metrohash641</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g id="metrohash64_1_keyentry" visibility="visible" onclick="gnuplot_svg.toggleVisibility(evt,'metrohash64_1')">
-	<g transform="translate(860.8,389.3)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
+	<g transform="translate(860.8,422.1)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
 		<text><tspan font-family="mono" >metrohash64</tspan><tspan font-family="mono"  font-size="8.8" dy="3.30px">1</tspan><tspan font-size="11.0" dy="-3.30"></tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0, 158, 115)'  d='M868.5,385.2 L907.5,385.2  '/>	</g>
-	<path stroke='rgb(  0, 158, 115)'  d='M74.1,182.4 L115.9,182.1 L157.7,182.1 L199.4,181.7 L241.2,181.6 L283.0,181.3 L324.8,181.3 L366.6,180.9
+	<path stroke='rgb(230, 159,   0)'  d='M868.5,418.0 L907.5,418.0  '/>	</g>
+	<path stroke='rgb(230, 159,   0)'  d='M74.1,182.4 L115.9,182.1 L157.7,182.1 L199.4,181.7 L241.2,181.6 L283.0,181.3 L324.8,181.3 L366.6,180.9
 		L408.3,182.2 L450.1,181.8 L491.9,181.8 L533.7,181.5 L575.5,181.4 L617.2,181.1 L659.0,181.0 L700.8,180.7
 		L742.6,181.9 L784.3,181.7 L826.1,181.6 L867.9,181.3 L909.7,181.2 L951.5,180.9 L993.2,180.8 L1035.0,180.5
 		L1076.8,181.6  '/></g>
@@ -1886,13 +1914,13 @@ onclick="gnuplot_svg.toggleCoordBox(evt)"  onmousemove="gnuplot_svg.moveCoordBox
 	<g id="metrohash64_2" ><title>metrohash642</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g id="metrohash64_2_keyentry" visibility="visible" onclick="gnuplot_svg.toggleVisibility(evt,'metrohash64_2')">
-	<g transform="translate(860.8,405.7)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
+	<g transform="translate(860.8,438.5)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
 		<text><tspan font-family="mono" >metrohash64</tspan><tspan font-family="mono"  font-size="8.8" dy="3.30px">2</tspan><tspan font-size="11.0" dy="-3.30"></tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb( 86, 180, 233)'  d='M868.5,401.6 L907.5,401.6  '/>	</g>
-	<path stroke='rgb( 86, 180, 233)'  d='M74.1,182.4 L115.9,182.1 L157.7,182.1 L199.4,181.7 L241.2,181.6 L283.0,181.3 L324.8,181.3 L366.6,180.9
+	<path stroke='rgb(240, 228,  66)'  d='M868.5,434.4 L907.5,434.4  '/>	</g>
+	<path stroke='rgb(240, 228,  66)'  d='M74.1,182.4 L115.9,182.1 L157.7,182.1 L199.4,181.7 L241.2,181.6 L283.0,181.3 L324.8,181.3 L366.6,180.9
 		L408.3,182.2 L450.1,181.8 L491.9,181.9 L533.7,181.5 L575.5,181.5 L617.2,181.1 L659.0,181.1 L700.8,180.7
 		L742.6,181.9 L784.3,181.7 L826.1,181.6 L867.9,181.3 L909.7,181.2 L951.5,180.9 L993.2,180.9 L1035.0,180.5
 		L1076.8,181.7  '/></g>
@@ -1900,13 +1928,13 @@ onclick="gnuplot_svg.toggleCoordBox(evt)"  onmousemove="gnuplot_svg.moveCoordBox
 	<g id="metrohash64crc_1" ><title>metrohash64crc1</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g id="metrohash64crc_1_keyentry" visibility="visible" onclick="gnuplot_svg.toggleVisibility(evt,'metrohash64crc_1')">
-	<g transform="translate(860.8,422.1)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
+	<g transform="translate(860.8,454.9)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
 		<text><tspan font-family="mono" >metrohash64crc</tspan><tspan font-family="mono"  font-size="8.8" dy="3.30px">1</tspan><tspan font-size="11.0" dy="-3.30"></tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(230, 159,   0)'  d='M868.5,418.0 L907.5,418.0  '/>	</g>
-	<path stroke='rgb(230, 159,   0)'  d='M74.1,182.5 L115.9,182.0 L157.7,182.1 L199.4,181.6 L241.2,181.7 L283.0,181.2 L324.8,181.3 L366.6,180.9
+	<path stroke='rgb(  0, 114, 178)'  d='M868.5,450.8 L907.5,450.8  '/>	</g>
+	<path stroke='rgb(  0, 114, 178)'  d='M74.1,182.5 L115.9,182.0 L157.7,182.1 L199.4,181.6 L241.2,181.7 L283.0,181.2 L324.8,181.3 L366.6,180.9
 		L408.3,182.3 L450.1,181.7 L491.9,181.9 L533.7,181.4 L575.5,181.4 L617.2,180.9 L659.0,181.1 L700.8,180.6
 		L742.6,182.0 L784.3,181.5 L826.1,181.7 L867.9,181.2 L909.7,181.2 L951.5,180.7 L993.2,180.9 L1035.0,180.4
 		L1076.8,181.8  '/></g>
@@ -1914,13 +1942,13 @@ onclick="gnuplot_svg.toggleCoordBox(evt)"  onmousemove="gnuplot_svg.moveCoordBox
 	<g id="metrohash64crc_2" ><title>metrohash64crc2</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g id="metrohash64crc_2_keyentry" visibility="visible" onclick="gnuplot_svg.toggleVisibility(evt,'metrohash64crc_2')">
-	<g transform="translate(860.8,438.5)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
+	<g transform="translate(860.8,471.3)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
 		<text><tspan font-family="mono" >metrohash64crc</tspan><tspan font-family="mono"  font-size="8.8" dy="3.30px">2</tspan><tspan font-size="11.0" dy="-3.30"></tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(240, 228,  66)'  d='M868.5,434.4 L907.5,434.4  '/>	</g>
-	<path stroke='rgb(240, 228,  66)'  d='M74.1,182.5 L115.9,181.9 L157.7,182.1 L199.4,181.6 L241.2,181.7 L283.0,181.2 L324.8,181.3 L366.6,180.8
+	<path stroke='rgb(229,  30,  16)'  d='M868.5,467.2 L907.5,467.2  '/>	</g>
+	<path stroke='rgb(229,  30,  16)'  d='M74.1,182.5 L115.9,181.9 L157.7,182.1 L199.4,181.6 L241.2,181.7 L283.0,181.2 L324.8,181.3 L366.6,180.8
 		L408.3,182.3 L450.1,181.7 L491.9,181.9 L533.7,181.4 L575.5,181.4 L617.2,180.9 L659.0,181.1 L700.8,180.6
 		L742.6,182.0 L784.3,181.5 L826.1,181.7 L867.9,181.2 L909.7,181.2 L951.5,180.6 L993.2,180.8 L1035.0,180.4
 		L1076.8,181.8  '/></g>
@@ -1928,13 +1956,13 @@ onclick="gnuplot_svg.toggleCoordBox(evt)"  onmousemove="gnuplot_svg.moveCoordBox
 	<g id="sdbm" ><title>sdbm</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g id="sdbm_keyentry" visibility="visible" onclick="gnuplot_svg.toggleVisibility(evt,'sdbm')">
-	<g transform="translate(860.8,454.9)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
+	<g transform="translate(860.8,487.7)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
 		<text><tspan font-family="mono" >sdbm</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0, 114, 178)'  d='M868.5,450.8 L907.5,450.8  '/>	</g>
-	<path stroke='rgb(  0, 114, 178)'  d='M74.1,178.0 L115.9,177.0 L157.7,176.2 L199.4,175.3 L241.2,174.3 L283.0,173.4 L324.8,172.5 L366.6,171.6
+	<path stroke='rgb(  0,   0,   0)'  d='M868.5,483.6 L907.5,483.6  '/>	</g>
+	<path stroke='rgb(  0,   0,   0)'  d='M74.1,178.0 L115.9,177.0 L157.7,176.2 L199.4,175.3 L241.2,174.3 L283.0,173.4 L324.8,172.5 L366.6,171.6
 		L408.3,170.7 L450.1,169.8 L491.9,168.9 L533.7,168.0 L575.5,167.1 L617.2,166.2 L659.0,165.3 L700.8,164.4
 		L742.6,163.5 L784.3,162.5 L826.1,161.6 L867.9,160.7 L909.7,159.8 L951.5,158.9 L993.2,158.0 L1035.0,157.1
 		L1076.8,156.2  '/></g>
@@ -1942,13 +1970,13 @@ onclick="gnuplot_svg.toggleCoordBox(evt)"  onmousemove="gnuplot_svg.moveCoordBox
 	<g id="sha1_32a" ><title>sha132a</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g id="sha1_32a_keyentry" visibility="visible" onclick="gnuplot_svg.toggleVisibility(evt,'sha1_32a')">
-	<g transform="translate(860.8,471.3)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
+	<g transform="translate(1030.7,241.7)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
 		<text><tspan font-family="mono" >sha1</tspan><tspan font-family="mono"  font-size="8.8" dy="3.30px">3</tspan><tspan font-family="mono"  font-size="11.0" dy="-3.30px">2a</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(229,  30,  16)'  d='M868.5,467.2 L907.5,467.2  '/>	</g>
-	<path stroke='rgb(229,  30,  16)'  d='M74.1,132.5 L115.9,135.6 L157.7,139.0 L199.4,145.9 L241.2,149.3 L283.0,150.8 L324.8,75.3 L366.6,78.7
+	<path stroke='rgb(148,   0, 211)'  d='M1038.4,237.6 L1077.4,237.6  '/>	</g>
+	<path stroke='rgb(148,   0, 211)'  d='M74.1,132.5 L115.9,135.6 L157.7,139.0 L199.4,145.9 L241.2,149.3 L283.0,150.8 L324.8,75.3 L366.6,78.7
 		L408.3,82.7 L450.1,86.1 L491.9,89.4 L533.7,92.8 L575.5,96.2 L617.2,99.6 L659.0,103.1 L700.8,106.3
 		L742.6,109.7 L784.3,113.0 L826.1,116.4 L867.9,122.9 L909.7,126.3 L951.5,128.2 L993.2,53.2 L1035.0,56.6
 		L1076.8,60.2  '/></g>
@@ -1956,13 +1984,13 @@ onclick="gnuplot_svg.toggleCoordBox(evt)"  onmousemove="gnuplot_svg.moveCoordBox
 	<g id="sha1_32b" ><title>sha132b</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g id="sha1_32b_keyentry" visibility="visible" onclick="gnuplot_svg.toggleVisibility(evt,'sha1_32b')">
-	<g transform="translate(860.8,487.7)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
+	<g transform="translate(1030.7,258.1)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
 		<text><tspan font-family="mono" >sha1</tspan><tspan font-family="mono"  font-size="8.8" dy="3.30px">3</tspan><tspan font-family="mono"  font-size="11.0" dy="-3.30px">2b</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M868.5,483.6 L907.5,483.6  '/>	</g>
-	<path stroke='rgb(  0,   0,   0)'  d='M74.1,132.7 L115.9,136.5 L157.7,140.3 L199.4,145.8 L241.2,149.7 L283.0,153.5 L324.8,75.1 L366.6,79.0
+	<path stroke='rgb(  0, 158, 115)'  d='M1038.4,254.0 L1077.4,254.0  '/>	</g>
+	<path stroke='rgb(  0, 158, 115)'  d='M74.1,132.7 L115.9,136.5 L157.7,140.3 L199.4,145.8 L241.2,149.7 L283.0,153.5 L324.8,75.1 L366.6,79.0
 		L408.3,82.7 L450.1,86.5 L491.9,90.3 L533.7,94.2 L575.5,98.0 L617.2,101.9 L659.0,105.7 L700.8,109.6
 		L742.6,113.4 L784.3,117.2 L826.1,121.0 L867.9,126.5 L909.7,130.4 L951.5,134.2 L993.2,55.9 L1035.0,59.7
 		L1076.8,64.1  '/></g>
@@ -1970,13 +1998,13 @@ onclick="gnuplot_svg.toggleCoordBox(evt)"  onmousemove="gnuplot_svg.moveCoordBox
 	<g id="sha1_64a" ><title>sha164a</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g id="sha1_64a_keyentry" visibility="visible" onclick="gnuplot_svg.toggleVisibility(evt,'sha1_64a')">
-	<g transform="translate(1030.7,241.7)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
+	<g transform="translate(1030.7,274.5)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
 		<text><tspan font-family="mono" >sha1</tspan><tspan font-family="mono"  font-size="8.8" dy="3.30px">6</tspan><tspan font-family="mono"  font-size="11.0" dy="-3.30px">4a</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(148,   0, 211)'  d='M1038.4,237.6 L1077.4,237.6  '/>	</g>
-	<path stroke='rgb(148,   0, 211)'  d='M74.1,132.8 L115.9,135.9 L157.7,139.3 L199.4,145.9 L241.2,149.4 L283.0,150.9 L324.8,75.7 L366.6,78.9
+	<path stroke='rgb( 86, 180, 233)'  d='M1038.4,270.4 L1077.4,270.4  '/>	</g>
+	<path stroke='rgb( 86, 180, 233)'  d='M74.1,132.8 L115.9,135.9 L157.7,139.3 L199.4,145.9 L241.2,149.4 L283.0,150.9 L324.8,75.7 L366.6,78.9
 		L408.3,83.1 L450.1,86.4 L491.9,89.8 L533.7,93.2 L575.5,96.6 L617.2,99.9 L659.0,103.2 L700.8,106.7
 		L742.6,110.0 L784.3,113.4 L826.1,116.8 L867.9,123.0 L909.7,126.4 L951.5,128.2 L993.2,53.6 L1035.0,56.8
 		L1076.8,59.9  '/></g>
@@ -1984,13 +2012,13 @@ onclick="gnuplot_svg.toggleCoordBox(evt)"  onmousemove="gnuplot_svg.moveCoordBox
 	<g id="superfast" ><title>superfast</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g id="superfast_keyentry" visibility="visible" onclick="gnuplot_svg.toggleVisibility(evt,'superfast')">
-	<g transform="translate(1030.7,258.1)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
+	<g transform="translate(1030.7,290.9)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
 		<text><tspan font-family="mono" >superfast</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0, 158, 115)'  d='M1038.4,254.0 L1077.4,254.0  '/>	</g>
-	<path stroke='rgb(  0, 158, 115)'  d='M74.1,181.9 L115.9,181.6 L157.7,181.3 L199.4,181.1 L241.2,180.8 L283.0,180.5 L324.8,180.2 L366.6,179.9
+	<path stroke='rgb(230, 159,   0)'  d='M1038.4,286.8 L1077.4,286.8  '/>	</g>
+	<path stroke='rgb(230, 159,   0)'  d='M74.1,181.9 L115.9,181.6 L157.7,181.3 L199.4,181.1 L241.2,180.8 L283.0,180.5 L324.8,180.2 L366.6,179.9
 		L408.3,179.6 L450.1,179.3 L491.9,179.0 L533.7,178.7 L575.5,178.4 L617.2,178.1 L659.0,177.8 L700.8,177.6
 		L742.6,177.3 L784.3,177.0 L826.1,176.6 L867.9,176.4 L909.7,176.1 L951.5,175.8 L993.2,175.5 L1035.0,175.2
 		L1076.8,174.9  '/></g>
@@ -1998,13 +2026,13 @@ onclick="gnuplot_svg.toggleCoordBox(evt)"  onmousemove="gnuplot_svg.moveCoordBox
 	<g id="t1ha" ><title>t1ha</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g id="t1ha_keyentry" visibility="visible" onclick="gnuplot_svg.toggleVisibility(evt,'t1ha')">
-	<g transform="translate(1030.7,274.5)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
+	<g transform="translate(1030.7,307.3)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
 		<text><tspan font-family="mono" >t1ha</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb( 86, 180, 233)'  d='M1038.4,270.4 L1077.4,270.4  '/>	</g>
-	<path stroke='rgb( 86, 180, 233)'  d='M74.1,184.0 L115.9,183.4 L157.7,183.4 L199.4,183.3 L241.2,183.4 L283.0,183.2 L324.8,183.2 L366.6,183.1
+	<path stroke='rgb(240, 228,  66)'  d='M1038.4,303.2 L1077.4,303.2  '/>	</g>
+	<path stroke='rgb(240, 228,  66)'  d='M74.1,184.0 L115.9,183.4 L157.7,183.4 L199.4,183.3 L241.2,183.4 L283.0,183.2 L324.8,183.2 L366.6,183.1
 		L408.3,183.1 L450.1,183.0 L491.9,183.0 L533.7,182.9 L575.5,183.0 L617.2,182.8 L659.0,182.8 L700.8,182.8
 		L742.6,182.8 L784.3,182.5 L826.1,182.6 L867.9,182.5 L909.7,182.5 L951.5,182.3 L993.2,182.4 L1035.0,182.3
 		L1076.8,182.3  '/></g>
@@ -2012,13 +2040,13 @@ onclick="gnuplot_svg.toggleCoordBox(evt)"  onmousemove="gnuplot_svg.moveCoordBox
 	<g id="t1ha_32be" ><title>t1ha32be</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g id="t1ha_32be_keyentry" visibility="visible" onclick="gnuplot_svg.toggleVisibility(evt,'t1ha_32be')">
-	<g transform="translate(1030.7,290.9)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
+	<g transform="translate(1030.7,323.7)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
 		<text><tspan font-family="mono" >t1ha</tspan><tspan font-family="mono"  font-size="8.8" dy="3.30px">3</tspan><tspan font-family="mono"  font-size="11.0" dy="-3.30px">2be</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(230, 159,   0)'  d='M1038.4,286.8 L1077.4,286.8  '/>	</g>
-	<path stroke='rgb(230, 159,   0)'  d='M74.1,183.2 L115.9,182.9 L157.7,182.6 L199.4,182.3 L241.2,182.8 L283.0,182.4 L324.8,182.2 L366.6,181.9
+	<path stroke='rgb(  0, 114, 178)'  d='M1038.4,319.6 L1077.4,319.6  '/>	</g>
+	<path stroke='rgb(  0, 114, 178)'  d='M74.1,183.2 L115.9,182.9 L157.7,182.6 L199.4,182.3 L241.2,182.8 L283.0,182.4 L324.8,182.2 L366.6,181.9
 		L408.3,182.4 L450.1,182.1 L491.9,181.8 L533.7,181.5 L575.5,181.9 L617.2,181.6 L659.0,181.3 L700.8,181.0
 		L742.6,181.4 L784.3,181.2 L826.1,180.9 L867.9,180.6 L909.7,181.0 L951.5,180.7 L993.2,180.5 L1035.0,180.2
 		L1076.8,180.6  '/></g>
@@ -2026,13 +2054,13 @@ onclick="gnuplot_svg.toggleCoordBox(evt)"  onmousemove="gnuplot_svg.moveCoordBox
 	<g id="t1ha_32le" ><title>t1ha32le</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g id="t1ha_32le_keyentry" visibility="visible" onclick="gnuplot_svg.toggleVisibility(evt,'t1ha_32le')">
-	<g transform="translate(1030.7,307.3)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
+	<g transform="translate(1030.7,340.1)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
 		<text><tspan font-family="mono" >t1ha</tspan><tspan font-family="mono"  font-size="8.8" dy="3.30px">3</tspan><tspan font-family="mono"  font-size="11.0" dy="-3.30px">2le</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(240, 228,  66)'  d='M1038.4,303.2 L1077.4,303.2  '/>	</g>
-	<path stroke='rgb(240, 228,  66)'  d='M74.1,183.3 L115.9,183.0 L157.7,182.6 L199.4,182.4 L241.2,182.9 L283.0,182.6 L324.8,182.3 L366.6,182.0
+	<path stroke='rgb(229,  30,  16)'  d='M1038.4,336.0 L1077.4,336.0  '/>	</g>
+	<path stroke='rgb(229,  30,  16)'  d='M74.1,183.3 L115.9,183.0 L157.7,182.6 L199.4,182.4 L241.2,182.9 L283.0,182.6 L324.8,182.3 L366.6,182.0
 		L408.3,182.5 L450.1,182.2 L491.9,181.9 L533.7,181.6 L575.5,182.1 L617.2,181.8 L659.0,181.5 L700.8,181.2
 		L742.6,181.7 L784.3,181.4 L826.1,181.1 L867.9,180.9 L909.7,181.3 L951.5,181.0 L993.2,180.7 L1035.0,180.4
 		L1076.8,181.0  '/></g>
@@ -2040,13 +2068,13 @@ onclick="gnuplot_svg.toggleCoordBox(evt)"  onmousemove="gnuplot_svg.moveCoordBox
 	<g id="t1ha_64be" ><title>t1ha64be</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g id="t1ha_64be_keyentry" visibility="visible" onclick="gnuplot_svg.toggleVisibility(evt,'t1ha_64be')">
-	<g transform="translate(1030.7,323.7)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
+	<g transform="translate(1030.7,356.5)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
 		<text><tspan font-family="mono" >t1ha</tspan><tspan font-family="mono"  font-size="8.8" dy="3.30px">6</tspan><tspan font-family="mono"  font-size="11.0" dy="-3.30px">4be</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0, 114, 178)'  d='M1038.4,319.6 L1077.4,319.6  '/>	</g>
-	<path stroke='rgb(  0, 114, 178)'  d='M74.1,183.6 L115.9,183.1 L157.7,182.9 L199.4,183.0 L241.2,182.8 L283.0,182.9 L324.8,182.6 L366.6,182.8
+	<path stroke='rgb(  0,   0,   0)'  d='M1038.4,352.4 L1077.4,352.4  '/>	</g>
+	<path stroke='rgb(  0,   0,   0)'  d='M74.1,183.6 L115.9,183.1 L157.7,182.9 L199.4,183.0 L241.2,182.8 L283.0,182.9 L324.8,182.6 L366.6,182.8
 		L408.3,182.9 L450.1,182.6 L491.9,182.4 L533.7,182.4 L575.5,182.3 L617.2,182.3 L659.0,182.1 L700.8,182.2
 		L742.6,182.3 L784.3,182.0 L826.1,181.9 L867.9,181.9 L909.7,181.7 L951.5,181.8 L993.2,181.5 L1035.0,181.7
 		L1076.8,181.8  '/></g>
@@ -2054,13 +2082,13 @@ onclick="gnuplot_svg.toggleCoordBox(evt)"  onmousemove="gnuplot_svg.moveCoordBox
 	<g id="t1ha_aes" ><title>t1haaes</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g id="t1ha_aes_keyentry" visibility="visible" onclick="gnuplot_svg.toggleVisibility(evt,'t1ha_aes')">
-	<g transform="translate(1030.7,340.1)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
+	<g transform="translate(1030.7,372.9)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
 		<text><tspan font-family="mono" >t1ha</tspan><tspan font-family="mono"  font-size="8.8" dy="3.30px">a</tspan><tspan font-family="mono"  font-size="11.0" dy="-3.30px">es</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(229,  30,  16)'  d='M1038.4,336.0 L1077.4,336.0  '/>	</g>
-	<path stroke='rgb(229,  30,  16)'  d='M74.1,184.0 L115.9,182.7 L157.7,182.7 L199.4,182.7 L241.2,182.3 L283.0,182.4 L324.8,182.4 L366.6,182.3
+	<path stroke='rgb(148,   0, 211)'  d='M1038.4,368.8 L1077.4,368.8  '/>	</g>
+	<path stroke='rgb(148,   0, 211)'  d='M74.1,184.0 L115.9,182.7 L157.7,182.7 L199.4,182.7 L241.2,182.3 L283.0,182.4 L324.8,182.4 L366.6,182.3
 		L408.3,182.3 L450.1,182.3 L491.9,182.3 L533.7,182.3 L575.5,182.0 L617.2,182.0 L659.0,182.0 L700.8,181.9
 		L742.6,182.0 L784.3,182.0 L826.1,181.9 L867.9,181.9 L909.7,181.6 L951.5,181.6 L993.2,181.6 L1035.0,181.4
 		L1076.8,180.9  '/></g>
@@ -2068,13 +2096,13 @@ onclick="gnuplot_svg.toggleCoordBox(evt)"  onmousemove="gnuplot_svg.moveCoordBox
 	<g id="t1ha_crc" ><title>t1hacrc</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g id="t1ha_crc_keyentry" visibility="visible" onclick="gnuplot_svg.toggleVisibility(evt,'t1ha_crc')">
-	<g transform="translate(1030.7,356.5)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
+	<g transform="translate(1030.7,389.3)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
 		<text><tspan font-family="mono" >t1ha</tspan><tspan font-family="mono"  font-size="8.8" dy="3.30px">c</tspan><tspan font-family="mono"  font-size="11.0" dy="-3.30px">rc</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M1038.4,352.4 L1077.4,352.4  '/>	</g>
-	<path stroke='rgb(  0,   0,   0)'  d='M74.1,183.8 L115.9,183.4 L157.7,183.4 L199.4,183.3 L241.2,183.3 L283.0,183.2 L324.8,183.2 L366.6,183.1
+	<path stroke='rgb(  0, 158, 115)'  d='M1038.4,385.2 L1077.4,385.2  '/>	</g>
+	<path stroke='rgb(  0, 158, 115)'  d='M74.1,183.8 L115.9,183.4 L157.7,183.4 L199.4,183.3 L241.2,183.3 L283.0,183.2 L324.8,183.2 L366.6,183.1
 		L408.3,183.4 L450.1,183.2 L491.9,183.2 L533.7,183.0 L575.5,183.1 L617.2,183.0 L659.0,183.0 L700.8,183.0
 		L742.6,183.2 L784.3,183.0 L826.1,183.0 L867.9,182.9 L909.7,182.9 L951.5,182.8 L993.2,182.9 L1035.0,182.8
 		L1076.8,182.9  '/></g>
@@ -2082,13 +2110,13 @@ onclick="gnuplot_svg.toggleCoordBox(evt)"  onmousemove="gnuplot_svg.moveCoordBox
 	<g id="x17" ><title>x17</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g id="x17_keyentry" visibility="visible" onclick="gnuplot_svg.toggleVisibility(evt,'x17')">
-	<g transform="translate(1030.7,372.9)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
+	<g transform="translate(1030.7,405.7)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
 		<text><tspan font-family="mono" >x17</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(148,   0, 211)'  d='M1038.4,368.8 L1077.4,368.8  '/>	</g>
-	<path stroke='rgb(148,   0, 211)'  d='M74.1,179.2 L115.9,178.0 L157.7,177.7 L199.4,176.5 L241.2,176.2 L283.0,175.0 L324.8,174.7 L366.6,173.6
+	<path stroke='rgb( 86, 180, 233)'  d='M1038.4,401.6 L1077.4,401.6  '/>	</g>
+	<path stroke='rgb( 86, 180, 233)'  d='M74.1,179.2 L115.9,178.0 L157.7,177.7 L199.4,176.5 L241.2,176.2 L283.0,175.0 L324.8,174.7 L366.6,173.6
 		L408.3,173.2 L450.1,172.1 L491.9,171.8 L533.7,170.6 L575.5,170.3 L617.2,169.1 L659.0,168.8 L700.8,167.7
 		L742.6,167.4 L784.3,166.2 L826.1,165.9 L867.9,164.7 L909.7,164.4 L951.5,163.2 L993.2,162.9 L1035.0,161.8
 		L1076.8,161.4  '/></g>
@@ -2096,13 +2124,13 @@ onclick="gnuplot_svg.toggleCoordBox(evt)"  onmousemove="gnuplot_svg.moveCoordBox
 	<g id="xxHash32" ><title>xxHash32</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g id="xxHash32_keyentry" visibility="visible" onclick="gnuplot_svg.toggleVisibility(evt,'xxHash32')">
-	<g transform="translate(1030.7,389.3)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
+	<g transform="translate(1030.7,422.1)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
 		<text><tspan font-family="mono" >xxHash32</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0, 158, 115)'  d='M1038.4,385.2 L1077.4,385.2  '/>	</g>
-	<path stroke='rgb(  0, 158, 115)'  d='M74.1,180.9 L115.9,180.5 L157.7,180.2 L199.4,179.9 L241.2,180.0 L283.0,179.8 L324.8,179.4 L366.6,179.2
+	<path stroke='rgb(230, 159,   0)'  d='M1038.4,418.0 L1077.4,418.0  '/>	</g>
+	<path stroke='rgb(230, 159,   0)'  d='M74.1,180.9 L115.9,180.5 L157.7,180.2 L199.4,179.9 L241.2,180.0 L283.0,179.8 L324.8,179.4 L366.6,179.2
 		L408.3,179.3 L450.1,179.0 L491.9,178.7 L533.7,178.3 L575.5,178.5 L617.2,178.1 L659.0,177.8 L700.8,177.5
 		L742.6,177.7 L784.3,177.4 L826.1,177.1 L867.9,176.7 L909.7,176.9 L951.5,176.6 L993.2,176.3 L1035.0,176.0
 		L1076.8,176.2  '/></g>
@@ -2110,18 +2138,18 @@ onclick="gnuplot_svg.toggleCoordBox(evt)"  onmousemove="gnuplot_svg.moveCoordBox
 	<g id="xxHash64" ><title>xxHash64</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g id="xxHash64_keyentry" visibility="visible" onclick="gnuplot_svg.toggleVisibility(evt,'xxHash64')">
-	<g transform="translate(1030.7,405.7)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
+	<g transform="translate(1030.7,438.5)" stroke="none" fill="black" font-family="mono" font-size="11.00"  text-anchor="end">
 		<text><tspan font-family="mono" >xxHash64</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb( 86, 180, 233)'  d='M1038.4,401.6 L1077.4,401.6  '/>	</g>
-	<path stroke='rgb( 86, 180, 233)'  d='M74.1,182.3 L115.9,181.9 L157.7,181.9 L199.4,181.6 L241.2,181.6 L283.0,181.3 L324.8,181.2 L366.6,180.9
+	<path stroke='rgb(240, 228,  66)'  d='M1038.4,434.4 L1077.4,434.4  '/>	</g>
+	<path stroke='rgb(240, 228,  66)'  d='M74.1,182.3 L115.9,181.9 L157.7,181.9 L199.4,181.6 L241.2,181.6 L283.0,181.3 L324.8,181.2 L366.6,180.9
 		L408.3,182.0 L450.1,181.6 L491.9,181.6 L533.7,181.3 L575.5,181.2 L617.2,180.9 L659.0,180.8 L700.8,180.6
 		L742.6,181.6 L784.3,181.3 L826.1,181.2 L867.9,180.9 L909.7,180.9 L951.5,180.6 L993.2,180.5 L1035.0,180.3
 		L1076.8,181.3  '/></g>
 	</g>
-<g fill="none" color="white" stroke="rgb( 86, 180, 233)" stroke-width="4.00" stroke-linecap="butt" stroke-linejoin="miter">
+<g fill="none" color="white" stroke="rgb(240, 228,  66)" stroke-width="4.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="4.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>

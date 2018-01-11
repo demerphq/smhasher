@@ -65,6 +65,8 @@ farmhash64_c          64  64  64 FAILED 25 of 187 tests. Avalanche: 17-41
 fasthash32            32  32  32 FAILED 1 of 187 tests. Avalanche: 17
 fasthash64            64  64  64 FAILED 25 of 187 tests. Avalanche: 17-41
 hasshe2              128 128 256 FAILED 34 of 187 tests. Avalanche: 17-41, OverAll: 187, Sanity: 4-5, TwoBytes: 59, 61, 63, Zeroes: 166-167, 170
+jodyhash32            32  32  32 FAILED 78 of 187 tests. Avalanche: 17-41, Cyclic: 43, 51-52, Differential: 9, 12, 15-16, Hi-Lo: 156-158, HiBit-Null: 150-152, Highbits2: 148-149, Highbits: 145-146, LowBit-Null: 153-155, Lowbits: 142-143, OverAll: 187, Sparse: 68, 70, 72, 74-80, Text: 159-162, 164-165, TwoBytes: 54-63, Words: 185, Zeroes: 167, 169-170
+jodyhash64            64  64  64 FAILED 84 of 187 tests. Avalanche: 17-41, Differential: 12, 15-16, Effs: 181, 183-184, Hi-Lo: 156-158, HiBit-Null: 150-152, Highbits2: 148-149, Highbits: 144-146, LowBit-Null: 153-155, Lowbits: 141-143, OverAll: 187, Sanity: 4-5, Sparse: 65-67, 69, 71, 73-80, Text: 160-162, 164-165, TwoBytes: 54-63, Words: 186, Zeroes: 166-170
 lookup3               32  32  32 FAILED 28 of 187 tests. Avalanche: 17-41, Lowbits: 141, 143, OverAll: 187
 md5_128a              64 256 128 FAILED 31 of 183 tests. Avalanche: 17-41, OverAll: 183, Seed: 169, 171, 173, 175, 177
 md5_32a               64 256  32 FAILED 26 of 173 tests. Avalanche: 17-41, OverAll: 173
