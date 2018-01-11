@@ -649,7 +649,7 @@ int main ( int argc, char ** argv )
         exit(1);
       }
       else
-      if (endptr != '\0') {
+      if (*endptr != '\0') {
         printf("Bad argument for --rng-seed '%s'\n",arg);
         exit(1);
       }
@@ -664,7 +664,7 @@ int main ( int argc, char ** argv )
         exit(1);
       }
       else
-      if (endptr != '\0') {
+      if (*endptr != '\0') {
         printf("Bad argument for --rng-seed '%s'\n",arg);
         exit(1);
       }
