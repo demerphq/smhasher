@@ -366,11 +366,11 @@ HashInfo g_hashes[] =
 #endif
 #if defined(__x86_64__)
   { "jodyhash32", "JodyHash for 32 bit (v5)",
-    32, 32, 32, 0xFB47D60D,
-    NULL, jodyhash32_test },
+    32, 32, 32, 0xC80A6FC3,
+    NULL, jodyhash32_with_state_test },
   { "jodyhash64", "JodyHash for 64 bit (v5)",
-    64, 64, 64, 0xFB47D60D,
-    NULL, jodyhash32_test },
+    64, 64, 64, 0x94F36447,
+    NULL, jodyhash64_with_state_test },
 #endif
 #if defined(__x86_64__)
   { "metrohash64_1", "MetroHash64_1 for 64-bit",

@@ -17,6 +17,8 @@
 #endif
 
 #include "fasthash.h"
+#include <stdlib.h>
+#include <string.h>
 
 //----------
 // These are _not_ hash functions (even though people tend to use crc32 as one...)
@@ -124,11 +126,35 @@ inline void MurmurHash64B_with_state_test ( const void * key, int len, const voi
   *(uint64_t*)out = MurmurHash64B(key,len,*((uint64_t *)state));
 }
 
-inline void jodyhash32_test( const void * key, int len, uint32_t seed, void * out ) {
-  *(uint32_t*)out = (uint32_t) jody_block_hash32((const jodyhash32_t *)key, (jodyhash32_t) seed, (size_t) len);
+inline void jodyhash32_with_state_test( const void * key, int len, const void *state, void * out ) {
+    void *buf;
+    bool do_free= 0;
+    if (0 && len % sizeof(jodyhash32_t)) {
+        int words= (len + sizeof(jodyhash32_t)-1 ) / sizeof(jodyhash32_t);
+        buf= malloc(words * sizeof(jodyhash32_t));
+        memcpy(buf,key,len);
+        do_free = 1;
+    } else {
+        buf= (void*)key;
+    }
+    *(uint32_t*)out = (uint32_t) jody_block_hash32((const jodyhash32_t *)buf, *((jodyhash32_t *)state), (size_t) len);
+    if (do_free) free(buf);
 }
-inline void jodyhash64_test( const void * key, int len, uint32_t seed, void * out ) {
-  *(uint32_t*)out = (uint32_t) jody_block_hash((const jodyhash_t *)key, (jodyhash_t) seed, (size_t) len);
+
+static uint64_t last_state=0;
+inline void jodyhash64_with_state_test( const void * key, int len, const void *state, void * out ) {
+    void *buf;
+    bool do_free= 0;
+    if (0 && len % sizeof(jodyhash_t)) {
+        int words= (len + sizeof(jodyhash_t)-1 ) / sizeof(jodyhash_t);
+        buf= malloc(words * sizeof(jodyhash_t));
+        memcpy(buf,key,len);
+        do_free = 1;
+    } else {
+        buf= (void*)key;
+    }
+    *(uint64_t*)out = (uint64_t) jody_block_hash((const jodyhash_t *)buf, *((jodyhash_t*)state), (size_t) len);
+    if (do_free) free(buf);
 }
 
 #if defined(__x86_64__)

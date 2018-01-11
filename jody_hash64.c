@@ -26,8 +26,8 @@
 /* DO NOT modify the shift unless you know what you're doing.
  * This shift was decided upon after lots of testing and
  * changing it will likely cause lots of hash collisions. */
-#ifndef JODY_HASH_SHIFT
-#define JODY_HASH_SHIFT 14
+#ifndef JODY_HASH64_SHIFT
+#define JODY_HASH64_SHIFT 14
 #endif
 
 /* The salt value's purpose is to cause each byte in the
@@ -41,8 +41,8 @@
  * that is not part of the data to be hashed. */
 
 /* Set hash parameters based on requested hash width */
-#if JODY_HASH_WIDTH == 64
-#define JODY_HASH_CONSTANT 0x1f3d5b79U
+#if JODY_HASH64_WIDTH == 64
+#define JODY_HASH64_CONSTANT 0x1f3d5b79U
 static const jodyhash_t tail_mask[] = {
         0x0000000000000000,
         0x00000000000000ff,
@@ -54,9 +54,9 @@ static const jodyhash_t tail_mask[] = {
         0x00ffffffffffffff,
         0xffffffffffffffff
 };
-#endif /* JODY_HASH_WIDTH == 64 */
-#if JODY_HASH_WIDTH == 32
-#define JODY_HASH_CONSTANT 0x1f3d5b79U
+#endif /* JODY_HASH64_WIDTH == 64 */
+#if JODY_HASH64_WIDTH == 32
+#define JODY_HASH64_CONSTANT 0x1f3d5b79U
 static const jodyhash_t tail_mask[] = {
         0x00000000,
         0x000000ff,
@@ -64,15 +64,15 @@ static const jodyhash_t tail_mask[] = {
         0x00ffffff,
         0xffffffff,
 };
-#endif /* JODY_HASH_WIDTH == 32 */
-#if JODY_HASH_WIDTH == 16
-#define JODY_HASH_CONSTANT 0x1f5bU
+#endif /* JODY_HASH64_WIDTH == 32 */
+#if JODY_HASH64_WIDTH == 16
+#define JODY_HASH64_CONSTANT 0x1f5bU
 static const jodyhash_t tail_mask[] = {
         0x0000,
         0x00ff,
         0xffff,
 };
-#endif /* JODY_HASH_WIDTH == 16 */
+#endif /* JODY_HASH64_WIDTH == 16 */
 
 
 /* Hash a block of arbitrary size; must be divisible by sizeof(jodyhash_t)
@@ -97,11 +97,11 @@ extern jodyhash_t jody_block_hash(const jodyhash_t *data,
         for (; len > 0; len--) {
                 element = *data;
                 hash += element;
-                hash += JODY_HASH_CONSTANT;
-                hash = (hash << JODY_HASH_SHIFT) | hash >> (sizeof(jodyhash_t) * 8 - JODY_HASH_SHIFT); /* bit rotate left */
+                hash += JODY_HASH64_CONSTANT;
+                hash = (hash << JODY_HASH64_SHIFT) | hash >> (sizeof(jodyhash_t) * 8 - JODY_HASH64_SHIFT); /* bit rotate left */
                 hash ^= element;
-                hash = (hash << JODY_HASH_SHIFT) | hash >> (sizeof(jodyhash_t) * 8 - JODY_HASH_SHIFT);
-                hash ^= JODY_HASH_CONSTANT;
+                hash = (hash << JODY_HASH64_SHIFT) | hash >> (sizeof(jodyhash_t) * 8 - JODY_HASH64_SHIFT);
+                hash ^= JODY_HASH64_CONSTANT;
                 hash += element;
                 data++;
         }
@@ -109,13 +109,13 @@ extern jodyhash_t jody_block_hash(const jodyhash_t *data,
         /* Handle data tail (for blocks indivisible by sizeof(jodyhash_t)) */
         len = count & (sizeof(jodyhash_t) - 1);
         if (len) {
-                partial_salt = JODY_HASH_CONSTANT & tail_mask[len];
+                partial_salt = JODY_HASH64_CONSTANT & tail_mask[len];
                 element = *data & tail_mask[len];
                 hash += element;
                 hash += partial_salt;
-                hash = (hash << JODY_HASH_SHIFT) | hash >> (sizeof(jodyhash_t) * 8 - JODY_HASH_SHIFT);
+                hash = (hash << JODY_HASH64_SHIFT) | hash >> (sizeof(jodyhash_t) * 8 - JODY_HASH64_SHIFT);
                 hash ^= element;
-                hash = (hash << JODY_HASH_SHIFT) | hash >> (sizeof(jodyhash_t) * 8 - JODY_HASH_SHIFT);
+                hash = (hash << JODY_HASH64_SHIFT) | hash >> (sizeof(jodyhash_t) * 8 - JODY_HASH64_SHIFT);
                 hash ^= partial_salt;
                 hash += element;
         }

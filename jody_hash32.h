@@ -23,22 +23,22 @@ extern "C" {
 
 /* Width of a jody_hash. Changing this will also require
  * changing the width of tail masks to match. */
-#ifndef JODY_HASH_WIDTH
-#define JODY_HASH_WIDTH 32
+#ifndef JODY_HASH32_WIDTH
+#define JODY_HASH32_WIDTH 32
 #endif
 
-#if JODY_HASH_WIDTH == 64
+#if JODY_HASH32_WIDTH == 64
 typedef uint64_t jodyhash32_t;
 #endif
-#if JODY_HASH_WIDTH == 32
+#if JODY_HASH32_WIDTH == 32
 typedef uint32_t jodyhash32_t;
 #endif
-#if JODY_HASH_WIDTH == 16
+#if JODY_HASH32_WIDTH == 16
 typedef uint16_t jodyhash32_t;
 #endif
 
 /* Version increments when algorithm changes incompatibly */
-#define JODY_HASH_VERSION 5
+#define JODY_HASH32_VERSION 5
 
 extern jodyhash32_t jody_block_hash32(const jodyhash32_t *data,
                 const jodyhash32_t start_hash, const size_t count);

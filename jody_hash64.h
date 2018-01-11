@@ -11,8 +11,8 @@
  * ****** WARNING *******
  */
 
-#ifndef JODY_HASH_H
-#define JODY_HASH_H
+#ifndef JODY_HASH64_H
+#define JODY_HASH64_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -23,22 +23,22 @@ extern "C" {
 
 /* Width of a jody_hash. Changing this will also require
  * changing the width of tail masks to match. */
-#ifndef JODY_HASH_WIDTH
-#define JODY_HASH_WIDTH 64
+#ifndef JODY_HASH64_WIDTH
+#define JODY_HASH64_WIDTH 64
 #endif
 
-#if JODY_HASH_WIDTH == 64
+#if JODY_HASH64_WIDTH == 64
 typedef uint64_t jodyhash_t;
 #endif
-#if JODY_HASH_WIDTH == 32
+#if JODY_HASH64_WIDTH == 32
 typedef uint32_t jodyhash_t;
 #endif
-#if JODY_HASH_WIDTH == 16
+#if JODY_HASH64_WIDTH == 16
 typedef uint16_t jodyhash_t;
 #endif
 
 /* Version increments when algorithm changes incompatibly */
-#define JODY_HASH_VERSION 5
+#define JODY_HASH64_VERSION 5
 
 extern jodyhash_t jody_block_hash(const jodyhash_t *data,
                 const jodyhash_t start_hash, const size_t count);
@@ -47,4 +47,4 @@ extern jodyhash_t jody_block_hash(const jodyhash_t *data,
 }
 #endif
 
-#endif        /* JODY_HASH_H */
+#endif        /* JODY_HASH64_H */
