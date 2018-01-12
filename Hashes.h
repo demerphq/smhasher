@@ -268,3 +268,58 @@ funny_hash64_2_with_state_test(const void *key, int len, const void * state, voi
 }
 #endif
 
+#if 1
+#include "highwayhash/highwayhash_target.h"
+#include "highwayhash/instruction_sets.h"
+
+inline void
+highwayhash64_with_state_test(const void *key, int len, const void * state, void *out)
+{
+    /* this is awkward, highwayhash uses the terms 'key' and 'state' for different
+     * purposes than smhasher does, our key is their in, and their key is our state/seed
+     * - currently i am not wrapping their state initialization properly here, this
+     * is pure passthrough */
+    using namespace highwayhash;
+    const HHKey seed HH_ALIGNAS(32) = { 
+        ((uint64_t *)state)[0], 
+        ((uint64_t *)state)[1], 
+        ((uint64_t *)state)[2],
+        ((uint64_t *)state)[3],
+    };
+    InstructionSets::Run<HighwayHash>(seed, (char*)key, len, (HHResult64 *)out);
+}
+
+inline void
+highwayhash128_with_state_test(const void *key, int len, const void * state, void *out)
+{
+    /* this is awkward, highwayhash uses the terms 'key' and 'state' for different
+     * purposes than smhasher does, our key is their in, and their key is our state/seed
+     * - currently i am not wrapping their state initialization properly here, this
+     * is pure passthrough */
+    using namespace highwayhash;
+    const HHKey seed HH_ALIGNAS(32) = { 
+        ((uint64_t *)state)[0], 
+        ((uint64_t *)state)[1], 
+        ((uint64_t *)state)[2],
+        ((uint64_t *)state)[3],
+    };
+    InstructionSets::Run<HighwayHash>(seed, (char*)key, len, (HHResult128 *)out);
+}
+
+inline void
+highwayhash256_with_state_test(const void *key, int len, const void * state, void *out)
+{
+    /* this is awkward, highwayhash uses the terms 'key' and 'state' for different
+     * purposes than smhasher does, our key is their in, and their key is our state/seed
+     * - currently i am not wrapping their state initialization properly here, this
+     * is pure passthrough */
+    using namespace highwayhash;
+    const HHKey seed HH_ALIGNAS(32) = { 
+        ((uint64_t *)state)[0], 
+        ((uint64_t *)state)[1], 
+        ((uint64_t *)state)[2],
+        ((uint64_t *)state)[3],
+    };
+    InstructionSets::Run<HighwayHash>(seed, (char*)key, len, (HHResult256 *)out);
+}
+#endif

@@ -1,0 +1,470 @@
+ok 1 - Found Hash # HighwayHash64
+###################################################################
+### Testing HighwayHash64 - no seed_state
+### - HighwayHash64 -
+### seedbits: 256 statebits: 256 hashbits: 64
+###################################################################
+ok 2 - Verification code # HighwayHash64
+# HighwayHash64        - Verification value 0xB1DFC70A : Passed.
+### Sanity Tests ###
+# Sanity check simple key bit flips and consistency - hashbytes=8..........
+ok 3 - SanityTest # HighwayHash64
+# Sanity check null suffixes change the hash (simple)..........
+ok 4 - Appended Zeroes Test # HighwayHash64
+ok 5 - Sanity Test # HighwayHash64
+### Speed Tests ###
+## Bulk speed test - 262144-byte keys
+# Alignment  7 -  4.718 bytes/cycle - 13498.45 MiB/sec @ 3 ghz
+# Alignment  6 -  4.719 bytes/cycle - 13501.12 MiB/sec @ 3 ghz
+# Alignment  5 -  4.720 bytes/cycle - 13504.76 MiB/sec @ 3 ghz
+# Alignment  4 -  4.718 bytes/cycle - 13499.50 MiB/sec @ 3 ghz
+# Alignment  3 -  4.719 bytes/cycle - 13502.11 MiB/sec @ 3 ghz
+# Alignment  2 -  4.719 bytes/cycle - 13501.93 MiB/sec @ 3 ghz
+# Alignment  1 -  4.718 bytes/cycle - 13499.34 MiB/sec @ 3 ghz
+# Alignment  0 -  4.737 bytes/cycle - 13552.92 MiB/sec @ 3 ghz
+# Average      -  4.721 bytes/cycle - 13507.52 MiB/sec @ 3 ghz
+## KeySpeed tests
+# HighwayHash64             0 byte keys       36.000 c/h
+# HighwayHash64             1 byte keys       60.557 c/h       60.557 c/b        0.017 b/c
+# HighwayHash64             2 byte keys       60.524 c/h       30.262 c/b        0.033 b/c
+# HighwayHash64             3 byte keys       60.510 c/h       20.170 c/b        0.050 b/c
+# HighwayHash64             4 byte keys       59.996 c/h       14.999 c/b        0.067 b/c
+# HighwayHash64             5 byte keys       60.499 c/h       12.100 c/b        0.083 b/c
+# HighwayHash64             6 byte keys       60.539 c/h       10.090 c/b        0.099 b/c
+# HighwayHash64             7 byte keys       60.532 c/h        8.647 c/b        0.116 b/c
+# HighwayHash64             8 byte keys       61.694 c/h        7.712 c/b        0.130 b/c
+# HighwayHash64             9 byte keys       60.713 c/h        6.746 c/b        0.148 b/c
+# HighwayHash64            10 byte keys       60.662 c/h        6.066 c/b        0.165 b/c
+# HighwayHash64            11 byte keys       60.671 c/h        5.516 c/b        0.181 b/c
+# HighwayHash64            12 byte keys       59.995 c/h        5.000 c/b        0.200 b/c
+# HighwayHash64            13 byte keys       60.665 c/h        4.667 c/b        0.214 b/c
+# HighwayHash64            14 byte keys       60.682 c/h        4.334 c/b        0.231 b/c
+# HighwayHash64            15 byte keys       60.665 c/h        4.044 c/b        0.247 b/c
+# HighwayHash64            16 byte keys       63.876 c/h        3.992 c/b        0.250 b/c
+# HighwayHash64            17 byte keys       63.230 c/h        3.719 c/b        0.269 b/c
+# HighwayHash64            18 byte keys       63.245 c/h        3.514 c/b        0.285 b/c
+# HighwayHash64            19 byte keys       62.958 c/h        3.314 c/b        0.302 b/c
+# HighwayHash64            20 byte keys       61.541 c/h        3.077 c/b        0.325 b/c
+# HighwayHash64            21 byte keys       61.512 c/h        2.929 c/b        0.341 b/c
+# HighwayHash64            22 byte keys       61.540 c/h        2.797 c/b        0.357 b/c
+# HighwayHash64            23 byte keys       61.533 c/h        2.675 c/b        0.374 b/c
+# HighwayHash64            24 byte keys       63.925 c/h        2.664 c/b        0.375 b/c
+# HighwayHash64            25 byte keys       63.950 c/h        2.558 c/b        0.391 b/c
+# HighwayHash64            26 byte keys       63.955 c/h        2.460 c/b        0.407 b/c
+# HighwayHash64            27 byte keys       63.941 c/h        2.368 c/b        0.422 b/c
+# HighwayHash64            28 byte keys       61.743 c/h        2.205 c/b        0.453 b/c
+# HighwayHash64            29 byte keys       61.723 c/h        2.128 c/b        0.470 b/c
+# HighwayHash64            30 byte keys       61.748 c/h        2.058 c/b        0.486 b/c
+# HighwayHash64            31 byte keys       61.727 c/h        1.991 c/b        0.502 b/c
+#                          Average < 32       60.845 c/h        3.926 c/b        0.255 b/c
+# HighwayHash64            32 byte keys       61.963 c/h        1.936 c/b        0.516 b/c
+# HighwayHash64            36 byte keys       69.942 c/h        1.943 c/b        0.515 b/c
+# HighwayHash64            40 byte keys       69.987 c/h        1.750 c/b        0.572 b/c
+# HighwayHash64            44 byte keys       69.950 c/h        1.590 c/b        0.629 b/c
+# HighwayHash64            48 byte keys       69.000 c/h        1.437 c/b        0.696 b/c
+# HighwayHash64            52 byte keys       69.000 c/h        1.327 c/b        0.754 b/c
+# HighwayHash64            56 byte keys       69.402 c/h        1.239 c/b        0.807 b/c
+# HighwayHash64            60 byte keys       69.000 c/h        1.150 c/b        0.870 b/c
+# HighwayHash64            64 byte keys       74.137 c/h        1.158 c/b        0.863 b/c
+# HighwayHash64            68 byte keys       76.910 c/h        1.131 c/b        0.884 b/c
+# HighwayHash64            72 byte keys       76.977 c/h        1.069 c/b        0.935 b/c
+# HighwayHash64            76 byte keys       76.886 c/h        1.012 c/b        0.988 b/c
+# HighwayHash64            80 byte keys       76.992 c/h        0.962 c/b        1.039 b/c
+# HighwayHash64            84 byte keys       76.323 c/h        0.909 c/b        1.101 b/c
+# HighwayHash64            88 byte keys       76.995 c/h        0.875 c/b        1.143 b/c
+# HighwayHash64            92 byte keys       76.000 c/h        0.826 c/b        1.211 b/c
+# HighwayHash64            96 byte keys       75.958 c/h        0.791 c/b        1.264 b/c
+# HighwayHash64           100 byte keys       83.999 c/h        0.840 c/b        1.190 b/c
+# HighwayHash64           104 byte keys       84.590 c/h        0.813 c/b        1.229 b/c
+# HighwayHash64           108 byte keys       84.105 c/h        0.779 c/b        1.284 b/c
+# HighwayHash64           112 byte keys       83.992 c/h        0.750 c/b        1.333 b/c
+# HighwayHash64           116 byte keys       83.938 c/h        0.724 c/b        1.382 b/c
+# HighwayHash64           120 byte keys       84.149 c/h        0.701 c/b        1.426 b/c
+# HighwayHash64           124 byte keys       83.956 c/h        0.677 c/b        1.477 b/c
+#                         Average < 128       67.343 c/h        1.593 c/b        0.628 b/c
+# HighwayHash64           128 byte keys       82.889 c/h        0.648 c/b        1.544 b/c
+# HighwayHash64           256 byte keys      119.932 c/h        0.468 c/b        2.135 b/c
+# HighwayHash64           512 byte keys      173.613 c/h        0.339 c/b        2.949 b/c
+# HighwayHash64          1024 byte keys      258.738 c/h        0.253 c/b        3.958 b/c
+# HighwayHash64          2048 byte keys      487.683 c/h        0.238 c/b        4.199 b/c
+# HighwayHash64          4096 byte keys     1073.589 c/h        0.262 c/b        3.815 b/c
+# HighwayHash64          8192 byte keys     1920.278 c/h        0.234 c/b        4.266 b/c
+# HighwayHash64         16384 byte keys     3643.189 c/h        0.222 c/b        4.497 b/c
+# HighwayHash64         32768 byte keys     7090.909 c/h        0.216 c/b        4.621 b/c
+# HighwayHash64         65536 byte keys    13981.288 c/h        0.213 c/b        4.687 b/c
+#                       Overall Average      493.990 c/h        0.245 c/b        4.089 b/c
+ok 6 - Speed (always passes) # HighwayHash64
+### Differential Tests ###
+# Testing 8303632 up-to-5-bit differentials in 64-bit keys -> 64 bit hashes.
+# 1000 reps, 8303632000 total tests, expecting 0.00 random collisions..........
+ok 7 - Differential collisions # HighwayHash64
+ok 8 - Nothing skipped during differential collision check # HighwayHash64
+# 0 total collisions, of which 0 single collisions were ignored
+ok 9 - ProcessDifferentials
+# Testing 11017632 up-to-4-bit differentials in 128-bit keys -> 64 bit hashes.
+# 1000 reps, 11017632000 total tests, expecting 0.00 random collisions..........
+ok 10 - Differential collisions # HighwayHash64
+ok 11 - Nothing skipped during differential collision check # HighwayHash64
+# 0 total collisions, of which 0 single collisions were ignored
+ok 12 - ProcessDifferentials
+# Testing 2796416 up-to-3-bit differentials in 256-bit keys -> 64 bit hashes.
+# 1000 reps, 2796416000 total tests, expecting 0.00 random collisions..........
+ok 13 - Differential collisions # HighwayHash64
+ok 14 - Nothing skipped during differential collision check # HighwayHash64
+# 0 total collisions, of which 0 single collisions were ignored
+ok 15 - ProcessDifferentials
+ok 16 - Differential # HighwayHash64
+### Avalanche Tests ### - seed-bits: 256 hash-bits: 64
+# Samples 500000, expected error 0.00051200, confidence level 99.99994267%
+# Testing   0-bit keys.......... ok.     # worst-bit:   0.572% error-ratio: 9.961832e-01
+ok 17 - Strict Avalanche Criteria - 0 bit/0 byte keys # HighwayHash64
+# Testing   8-bit keys.......... ok.     # worst-bit:   0.583% error-ratio: 1.006527e+00
+ok 18 - Strict Avalanche Criteria - 8 bit/1 byte keys # HighwayHash64
+# Testing  16-bit keys.......... ok.     # worst-bit:   0.591% error-ratio: 9.964938e-01
+ok 19 - Strict Avalanche Criteria - 16 bit/2 byte keys # HighwayHash64
+# Testing  24-bit keys.......... ok.     # worst-bit:   0.594% error-ratio: 1.014805e+00
+ok 20 - Strict Avalanche Criteria - 24 bit/3 byte keys # HighwayHash64
+# Testing  32-bit keys.......... ok.     # worst-bit:   0.585% error-ratio: 9.894823e-01
+ok 21 - Strict Avalanche Criteria - 32 bit/4 byte keys # HighwayHash64
+# Testing  40-bit keys.......... ok.     # worst-bit:   0.628% error-ratio: 9.801854e-01
+ok 22 - Strict Avalanche Criteria - 40 bit/5 byte keys # HighwayHash64
+# Testing  48-bit keys.......... ok.     # worst-bit:   0.596% error-ratio: 1.021953e+00
+ok 23 - Strict Avalanche Criteria - 48 bit/6 byte keys # HighwayHash64
+# Testing  56-bit keys.......... ok.     # worst-bit:   0.583% error-ratio: 9.980381e-01
+ok 24 - Strict Avalanche Criteria - 56 bit/7 byte keys # HighwayHash64
+# Testing  64-bit keys.......... ok.     # worst-bit:   0.578% error-ratio: 9.970823e-01
+ok 25 - Strict Avalanche Criteria - 64 bit/8 byte keys # HighwayHash64
+# Testing  72-bit keys.......... ok.     # worst-bit:   0.586% error-ratio: 9.873165e-01
+ok 26 - Strict Avalanche Criteria - 72 bit/9 byte keys # HighwayHash64
+# Testing  80-bit keys.......... ok.     # worst-bit:   0.692% error-ratio: 9.984304e-01
+ok 27 - Strict Avalanche Criteria - 80 bit/10 byte keys # HighwayHash64
+# Testing  88-bit keys.......... ok.     # worst-bit:   0.590% error-ratio: 9.940214e-01
+ok 28 - Strict Avalanche Criteria - 88 bit/11 byte keys # HighwayHash64
+# Testing  96-bit keys.......... ok.     # worst-bit:   0.591% error-ratio: 1.004654e+00
+ok 29 - Strict Avalanche Criteria - 96 bit/12 byte keys # HighwayHash64
+# Testing 104-bit keys.......... ok.     # worst-bit:   0.582% error-ratio: 1.005040e+00
+ok 30 - Strict Avalanche Criteria - 104 bit/13 byte keys # HighwayHash64
+# Testing 112-bit keys.......... ok.     # worst-bit:   0.597% error-ratio: 1.002855e+00
+ok 31 - Strict Avalanche Criteria - 112 bit/14 byte keys # HighwayHash64
+# Testing 120-bit keys.......... ok.     # worst-bit:   0.586% error-ratio: 1.020609e+00
+ok 32 - Strict Avalanche Criteria - 120 bit/15 byte keys # HighwayHash64
+# Testing 128-bit keys.......... ok.     # worst-bit:   0.628% error-ratio: 9.855491e-01
+ok 33 - Strict Avalanche Criteria - 128 bit/16 byte keys # HighwayHash64
+# Testing 136-bit keys.......... ok.     # worst-bit:   0.687% error-ratio: 9.970714e-01
+ok 34 - Strict Avalanche Criteria - 136 bit/17 byte keys # HighwayHash64
+# Testing 144-bit keys.......... ok.     # worst-bit:   0.640% error-ratio: 9.934893e-01
+ok 35 - Strict Avalanche Criteria - 144 bit/18 byte keys # HighwayHash64
+# Testing 152-bit keys.......... ok.     # worst-bit:   0.651% error-ratio: 1.010577e+00
+ok 36 - Strict Avalanche Criteria - 152 bit/19 byte keys # HighwayHash64
+# Testing 152-bit keys.......... ok.     # worst-bit:   0.565% error-ratio: 9.863664e-01
+ok 37 - Strict Avalanche Criteria - 152 bit/19 byte keys # HighwayHash64
+# Testing 200-bit keys.......... ok.     # worst-bit:   0.592% error-ratio: 9.908738e-01
+ok 38 - Strict Avalanche Criteria - 200 bit/25 byte keys # HighwayHash64
+# Testing 256-bit keys.......... ok.     # worst-bit:   0.592% error-ratio: 1.010654e+00
+ok 39 - Strict Avalanche Criteria - 256 bit/32 byte keys # HighwayHash64
+# Testing 512-bit keys.......... ok.     # worst-bit:   0.591% error-ratio: 9.982105e-01
+ok 40 - Strict Avalanche Criteria - 512 bit/64 byte keys # HighwayHash64
+# Testing 520-bit keys.......... ok.     # worst-bit:   0.599% error-ratio: 1.004773e+00
+ok 41 - Strict Avalanche Criteria - 520 bit/65 byte keys # HighwayHash64
+### Keyset 'Cyclic' Tests ###
+# Keyset 'Cyclic' - 8 cycles of 8 bytes - 10000000 keys
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 42 - Collision Rate for Keyset 'Cyclic' - 8 cycles of 8 bytes - 10000000 keys
+ok 43 - Distribution Bias Check for Keyset 'Cyclic' - 8 cycles of 8 bytes - 10000000 keys
+# Keyset 'Cyclic' - 8 cycles of 9 bytes - 10000000 keys
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 44 - Collision Rate for Keyset 'Cyclic' - 8 cycles of 9 bytes - 10000000 keys
+ok 45 - Distribution Bias Check for Keyset 'Cyclic' - 8 cycles of 9 bytes - 10000000 keys
+# Keyset 'Cyclic' - 8 cycles of 10 bytes - 10000000 keys
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 46 - Collision Rate for Keyset 'Cyclic' - 8 cycles of 10 bytes - 10000000 keys
+ok 47 - Distribution Bias Check for Keyset 'Cyclic' - 8 cycles of 10 bytes - 10000000 keys
+# Keyset 'Cyclic' - 8 cycles of 11 bytes - 10000000 keys
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 48 - Collision Rate for Keyset 'Cyclic' - 8 cycles of 11 bytes - 10000000 keys
+ok 49 - Distribution Bias Check for Keyset 'Cyclic' - 8 cycles of 11 bytes - 10000000 keys
+# Keyset 'Cyclic' - 8 cycles of 12 bytes - 10000000 keys
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 50 - Collision Rate for Keyset 'Cyclic' - 8 cycles of 12 bytes - 10000000 keys
+ok 51 - Distribution Bias Check for Keyset 'Cyclic' - 8 cycles of 12 bytes - 10000000 keys
+ok 52 - Keyset 'Cyclic' # HighwayHash64
+### Keyset 'TwoBytes' Tests ###
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 53 - Collision Rate for Keyset 'TwoBytes' - up-to-4-byte keys, 652545 total keys
+ok 54 - Distribution Bias Check for Keyset 'TwoBytes' - up-to-4-byte keys, 652545 total keys
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 55 - Collision Rate for Keyset 'TwoBytes' - up-to-8-byte keys, 5471025 total keys
+ok 56 - Distribution Bias Check for Keyset 'TwoBytes' - up-to-8-byte keys, 5471025 total keys
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 57 - Collision Rate for Keyset 'TwoBytes' - up-to-12-byte keys, 18616785 total keys
+ok 58 - Distribution Bias Check for Keyset 'TwoBytes' - up-to-12-byte keys, 18616785 total keys
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 59 - Collision Rate for Keyset 'TwoBytes' - up-to-16-byte keys, 44251425 total keys
+ok 60 - Distribution Bias Check for Keyset 'TwoBytes' - up-to-16-byte keys, 44251425 total keys
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 61 - Collision Rate for Keyset 'TwoBytes' - up-to-20-byte keys, 86536545 total keys
+ok 62 - Distribution Bias Check for Keyset 'TwoBytes' - up-to-20-byte keys, 86536545 total keys
+ok 63 - Keyset 'TwoBytes' # HighwayHash64
+### Keyset 'Sparse' Tests ###
+# Keyset 'Sparse' - 32-bit keys with up to 6 bits set - 1149017 keys
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 64 - Collision Rate for Keyset 'Sparse' - 32-bit keys with up to 6 bits set
+ok 65 - Distribution Bias Check for Keyset 'Sparse' - 32-bit keys with up to 6 bits set
+# Keyset 'Sparse' - 40-bit keys with up to 6 bits set - 4598479 keys
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 66 - Collision Rate for Keyset 'Sparse' - 40-bit keys with up to 6 bits set
+ok 67 - Distribution Bias Check for Keyset 'Sparse' - 40-bit keys with up to 6 bits set
+# Keyset 'Sparse' - 48-bit keys with up to 5 bits set - 1925357 keys
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 68 - Collision Rate for Keyset 'Sparse' - 48-bit keys with up to 5 bits set
+ok 69 - Distribution Bias Check for Keyset 'Sparse' - 48-bit keys with up to 5 bits set
+# Keyset 'Sparse' - 56-bit keys with up to 5 bits set - 4216423 keys
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 70 - Collision Rate for Keyset 'Sparse' - 56-bit keys with up to 5 bits set
+ok 71 - Distribution Bias Check for Keyset 'Sparse' - 56-bit keys with up to 5 bits set
+# Keyset 'Sparse' - 64-bit keys with up to 5 bits set - 8303633 keys
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 72 - Collision Rate for Keyset 'Sparse' - 64-bit keys with up to 5 bits set
+ok 73 - Distribution Bias Check for Keyset 'Sparse' - 64-bit keys with up to 5 bits set
+# Keyset 'Sparse' - 96-bit keys with up to 4 bits set - 3469497 keys
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 74 - Collision Rate for Keyset 'Sparse' - 96-bit keys with up to 4 bits set
+ok 75 - Distribution Bias Check for Keyset 'Sparse' - 96-bit keys with up to 4 bits set
+# Keyset 'Sparse' - 256-bit keys with up to 3 bits set - 2796417 keys
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 76 - Collision Rate for Keyset 'Sparse' - 256-bit keys with up to 3 bits set
+ok 77 - Distribution Bias Check for Keyset 'Sparse' - 256-bit keys with up to 3 bits set
+# Keyset 'Sparse' - 2048-bit keys with up to 2 bits set - 2098177 keys
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 78 - Collision Rate for Keyset 'Sparse' - 2048-bit keys with up to 2 bits set
+ok 79 - Distribution Bias Check for Keyset 'Sparse' - 2048-bit keys with up to 2 bits set
+ok 80 - Keyset 'Sparse' # HighwayHash64
+### Keyset 'Crc-MultiCollision' Tests ###
+# Keyset 'Crc(a)-MultiCollision' - 1048575 x 16 block keys - 128-bytes long - 10 seeds
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 81 - Collision Rate for Keyset 'Crc(a)-MultiCollision' - seed 1 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 82 - Collision Rate for Keyset 'Crc(a)-MultiCollision' - seed 2 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 83 - Collision Rate for Keyset 'Crc(a)-MultiCollision' - seed 3 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 84 - Collision Rate for Keyset 'Crc(a)-MultiCollision' - seed 4 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 85 - Collision Rate for Keyset 'Crc(a)-MultiCollision' - seed 5 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 86 - Collision Rate for Keyset 'Crc(a)-MultiCollision' - seed 6 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 87 - Collision Rate for Keyset 'Crc(a)-MultiCollision' - seed 7 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 88 - Collision Rate for Keyset 'Crc(a)-MultiCollision' - seed 8 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 89 - Collision Rate for Keyset 'Crc(a)-MultiCollision' - seed 9 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 90 - Collision Rate for Keyset 'Crc(a)-MultiCollision' - seed 10 # HighwayHash64
+# Keyset 'Crc(b)-MultiCollision' - 1048575 x 16 block keys - 128-bytes long - 10 seeds
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 91 - Collision Rate for Keyset 'Crc(b)-MultiCollision' - seed 1 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 92 - Collision Rate for Keyset 'Crc(b)-MultiCollision' - seed 2 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 93 - Collision Rate for Keyset 'Crc(b)-MultiCollision' - seed 3 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 94 - Collision Rate for Keyset 'Crc(b)-MultiCollision' - seed 4 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 95 - Collision Rate for Keyset 'Crc(b)-MultiCollision' - seed 5 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 96 - Collision Rate for Keyset 'Crc(b)-MultiCollision' - seed 6 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 97 - Collision Rate for Keyset 'Crc(b)-MultiCollision' - seed 7 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 98 - Collision Rate for Keyset 'Crc(b)-MultiCollision' - seed 8 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 99 - Collision Rate for Keyset 'Crc(b)-MultiCollision' - seed 9 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 100 - Collision Rate for Keyset 'Crc(b)-MultiCollision' - seed 10 # HighwayHash64
+### Keyset 'Murmur2-MultiCollision' Tests ###
+# Keyset 'Murmur2-MultiCollision' - 1048575 x 16 block keys - 128-bytes long - 10 seeds
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 101 - Collision Rate for Keyset 'Murmur2-MultiCollision' - seed 1 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 102 - Collision Rate for Keyset 'Murmur2-MultiCollision' - seed 2 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 103 - Collision Rate for Keyset 'Murmur2-MultiCollision' - seed 3 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 104 - Collision Rate for Keyset 'Murmur2-MultiCollision' - seed 4 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 105 - Collision Rate for Keyset 'Murmur2-MultiCollision' - seed 5 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 106 - Collision Rate for Keyset 'Murmur2-MultiCollision' - seed 6 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 107 - Collision Rate for Keyset 'Murmur2-MultiCollision' - seed 7 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 108 - Collision Rate for Keyset 'Murmur2-MultiCollision' - seed 8 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 109 - Collision Rate for Keyset 'Murmur2-MultiCollision' - seed 9 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 110 - Collision Rate for Keyset 'Murmur2-MultiCollision' - seed 10 # HighwayHash64
+### Keyset 'Murmur3A-MultiCollision' Tests ###
+# Keyset 'Murmur3A-MultiCollision' - 1048575 x 16 block keys - 128-bytes long - 10 seeds
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 111 - Collision Rate for Keyset 'Murmur3A-MultiCollision' - seed 1 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 112 - Collision Rate for Keyset 'Murmur3A-MultiCollision' - seed 2 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 113 - Collision Rate for Keyset 'Murmur3A-MultiCollision' - seed 3 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 114 - Collision Rate for Keyset 'Murmur3A-MultiCollision' - seed 4 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 115 - Collision Rate for Keyset 'Murmur3A-MultiCollision' - seed 5 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 116 - Collision Rate for Keyset 'Murmur3A-MultiCollision' - seed 6 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 117 - Collision Rate for Keyset 'Murmur3A-MultiCollision' - seed 7 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 118 - Collision Rate for Keyset 'Murmur3A-MultiCollision' - seed 8 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 119 - Collision Rate for Keyset 'Murmur3A-MultiCollision' - seed 9 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 120 - Collision Rate for Keyset 'Murmur3A-MultiCollision' - seed 10 # HighwayHash64
+### Keyset 'Murmur3F-MultiCollision' Tests ###
+# Keyset 'Murmur3F-MultiCollision' - 1048575 x 16 block keys - 512-bytes long - 10 seeds
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 121 - Collision Rate for Keyset 'Murmur3F-MultiCollision' - seed 1 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 122 - Collision Rate for Keyset 'Murmur3F-MultiCollision' - seed 2 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 123 - Collision Rate for Keyset 'Murmur3F-MultiCollision' - seed 3 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 124 - Collision Rate for Keyset 'Murmur3F-MultiCollision' - seed 4 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 125 - Collision Rate for Keyset 'Murmur3F-MultiCollision' - seed 5 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 126 - Collision Rate for Keyset 'Murmur3F-MultiCollision' - seed 6 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 127 - Collision Rate for Keyset 'Murmur3F-MultiCollision' - seed 7 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 128 - Collision Rate for Keyset 'Murmur3F-MultiCollision' - seed 8 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 129 - Collision Rate for Keyset 'Murmur3F-MultiCollision' - seed 9 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 130 - Collision Rate for Keyset 'Murmur3F-MultiCollision' - seed 10 # HighwayHash64
+### Keyset 'City64-MultiCollision' Tests ###
+# Keyset 'City64-MultiCollision' - 10 x 2 block keys - 16-bytes long - 10 seeds
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 131 - Collision Rate for Keyset 'City64-MultiCollision' - seed 1 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 132 - Collision Rate for Keyset 'City64-MultiCollision' - seed 2 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 133 - Collision Rate for Keyset 'City64-MultiCollision' - seed 3 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 134 - Collision Rate for Keyset 'City64-MultiCollision' - seed 4 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 135 - Collision Rate for Keyset 'City64-MultiCollision' - seed 5 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 136 - Collision Rate for Keyset 'City64-MultiCollision' - seed 6 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 137 - Collision Rate for Keyset 'City64-MultiCollision' - seed 7 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 138 - Collision Rate for Keyset 'City64-MultiCollision' - seed 8 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 139 - Collision Rate for Keyset 'City64-MultiCollision' - seed 9 # HighwayHash64
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 140 - Collision Rate for Keyset 'City64-MultiCollision' - seed 10 # HighwayHash64
+### Keyset 'Combination Lowbits' Tests ###
+# Keyset 'Combination' - up to 8 blocks from a set of 8 - 19173960 keys
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 141 - Collision Rate for Keyset 'Combination Lowbits'
+ok 142 - Distribution Bias Check for Keyset 'Combination Lowbits'
+ok 143 - Keyset 'Combination Lowbits' # HighwayHash64
+### Keyset 'Combination Highbits' Tests ###
+# Keyset 'Combination' - up to 8 blocks from a set of 8 - 19173960 keys
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 144 - Collision Rate for Keyset 'Combination Highbits'
+ok 145 - Distribution Bias Check for Keyset 'Combination Highbits'
+ok 146 - Keyset 'Combination Highbits' # HighwayHash64
+### Keyset 'Combination Highbits2' Tests ###
+# Keyset 'Combination' - up to 8 blocks from a set of 8 - 19173960 keys
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 147 - Collision Rate for Keyset 'Combination Highbits2'
+ok 148 - Distribution Bias Check for Keyset 'Combination Highbits2'
+ok 149 - Keyset 'Combination Highbits2' # HighwayHash64
+### Keyset 'Combination HiBit-Null' Tests ###
+# Keyset 'Combination' - up to 20 blocks from a set of 2 - 2097150 keys
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 150 - Collision Rate for Keyset 'Combination HiBit-Null'
+ok 151 - Distribution Bias Check for Keyset 'Combination HiBit-Null'
+ok 152 - Keyset 'Combination HiBit-Null' # HighwayHash64
+### Keyset 'Combination LowBit-Null' Tests ###
+# Keyset 'Combination' - up to 20 blocks from a set of 2 - 2097150 keys
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 153 - Collision Rate for Keyset 'Combination LowBit-Null'
+ok 154 - Distribution Bias Check for Keyset 'Combination LowBit-Null'
+ok 155 - Keyset 'Combination LowBit-Null' # HighwayHash64
+### Keyset 'Combination Hi-Lo' Tests ###
+# Keyset 'Combination' - up to 6 blocks from a set of 15 - 12204240 keys
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 156 - Collision Rate for Keyset 'Combination Hi-Lo'
+ok 157 - Distribution Bias Check for Keyset 'Combination Hi-Lo'
+ok 158 - Keyset 'Combination Hi-Lo' # HighwayHash64
+### Keyset 'Text' Tests ###
+# Keyset 'Text' - keys of form "Foo[XXXX]Bar" - 14776336 keys
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 159 - Collision Rate for Keyset 'Text' - keys of form "Foo[XXXX]Bar" - 14776336 keys
+ok 160 - Distribution Bias Check for Keyset 'Text' - keys of form "Foo[XXXX]Bar" - 14776336 keys
+# Keyset 'Text' - keys of form "FooBar[XXXX]" - 14776336 keys
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 161 - Collision Rate for Keyset 'Text' - keys of form "FooBar[XXXX]" - 14776336 keys
+ok 162 - Distribution Bias Check for Keyset 'Text' - keys of form "FooBar[XXXX]" - 14776336 keys
+# Keyset 'Text' - keys of form "[XXXX]FooBar" - 14776336 keys
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 163 - Collision Rate for Keyset 'Text' - keys of form "[XXXX]FooBar" - 14776336 keys
+ok 164 - Distribution Bias Check for Keyset 'Text' - keys of form "[XXXX]FooBar" - 14776336 keys
+ok 165 - Keyset 'Text' # HighwayHash64
+### Keyset 'Zeroes' Tests ###
+# Keyset 'Zeroes' - 262144 keys, zero seed
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 166 - Collision Rate for Keyset 'Zeroes' - 262144 keys, zero seed
+ok 167 - Distribution Bias Check for Keyset 'Zeroes' - 262144 keys, zero seed
+# Keyset 'Zeroes' - 262144 keys, nonzero seed
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 168 - Collision Rate for Keyset 'Zeroes' - 262144 keys, nonzero seed
+ok 169 - Distribution Bias Check for Keyset 'Zeroes' - 262144 keys, nonzero seed
+ok 170 - Keyset 'Zeroes' # HighwayHash64
+### Keyset 'Seed' Tests ###
+# Keyset 'Seed' - 2000000 seeds, Key "The quick brown fox "...
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 171 - Collision Rate for Keyset 'Seed' - 2000000 seeds, Key "The quick brown fox "...
+ok 172 - Distribution Bias Check for Keyset 'Seed' - 2000000 seeds, Key "The quick brown fox "...
+# Keyset 'Seed' - 2000000 seeds, Key ""
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 173 - Collision Rate for Keyset 'Seed' - 2000000 seeds, Key ""
+ok 174 - Distribution Bias Check for Keyset 'Seed' - 2000000 seeds, Key ""
+# Keyset 'Seed' - 2000000 seeds, Key "00101100110101101"
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 175 - Collision Rate for Keyset 'Seed' - 2000000 seeds, Key "00101100110101101"
+ok 176 - Distribution Bias Check for Keyset 'Seed' - 2000000 seeds, Key "00101100110101101"
+# Keyset 'Seed' - 2000000 seeds, Key "abcbcddbdebdcaaabaaa"...
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 177 - Collision Rate for Keyset 'Seed' - 2000000 seeds, Key "abcbcddbdebdcaaabaaa"...
+ok 178 - Distribution Bias Check for Keyset 'Seed' - 2000000 seeds, Key "abcbcddbdebdcaaabaaa"...
+ok 179 - Keyset 'Seed' # HighwayHash64
+### Keyset 'Effs' Tests ###
+# Keyset 'Effs' - 262144 keys, zero seed
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 180 - Collision Rate for Keyset 'Effs' - 262144 keys, zero seed
+ok 181 - Distribution Bias Check for Keyset 'Effs' - 262144 keys, zero seed
+# Keyset 'Effs' - 262144 keys, nonzero seed
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 182 - Collision Rate for Keyset 'Effs' - 262144 keys, nonzero seed
+ok 183 - Distribution Bias Check for Keyset 'Effs' - 262144 keys, nonzero seed
+ok 184 - Keyset 'Effs' # HighwayHash64
+### Keyset 'Words' Tests ###
+# Hashed 99171 keys from 297513 words from file '/usr/share/dict/words'
+# Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
+ok 185 - Collision Rate for Keyset 'Words'
+ok 186 - Distribution Bias Check for Keyset 'Words'
+ok 187 - all tests passed # HighwayHash64
+1..187
+# All Tests Passed. HighwayHash64 passed all 187 tests run.
+# Testing took 2889.933109 seconds
+# This is SMHasher version v1.3-demerphq-16-g2d5174a - built on Jan 11 2018.

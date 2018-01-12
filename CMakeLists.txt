@@ -142,6 +142,11 @@ IF(CMAKE_SIZEOF_VOID_P EQUAL 8)
     opt_cmetrohash64_1.c fasthash.cpp)
 ENDIF()
 
+#set(CMAKE_C_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -Ihighwayhash")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -Ihighwayhash -L/home/yorton/git_tree/highwayhash/lib -lhighwayhash")
+#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -Ihighwayhash")
+#target_link_libraries(highwayhash -L/home/yorton/git_tree/highwayhash/lib)
+
 IF(EXISTS "./BeagleHashes_test.c")
     set(BEAGLE_SRC BeagleHashes_test.c)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DHAVE_BEAGLE_HASHES")

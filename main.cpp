@@ -87,7 +87,19 @@ TestOpts g_testopts[] =
   { g_testMurmur3Collision,"Murmur3Multi"},
   { g_testWords,        "Words" },
 };
-
+/*
+        typedef struct HashInfo
+        {
+          const char * name;
+          const char * desc;
+          int seedbits;
+          int statebits;
+          int hashbits;
+          uint32_t verification;
+          pfSeedState seed_state;
+          pfHashWithState hash_with_state;
+        } HashInfo;
+*/
 //-----------------------------------------------------------------------------
 // This is the list of all hashes that SMHasher can test.
 #define bitsizeof(x) (sizeof(x) * 8)
@@ -371,6 +383,17 @@ HashInfo g_hashes[] =
   { "jodyhash64", "JodyHash for 64 bit (v5)",
     64, 64, 64, 0x94F36447,
     NULL, jodyhash64_with_state_test },
+#endif
+#if 1
+  { "HighwayHash64", "HighwayHash64",
+    256, 256, 64, 0xB1DFC70A,
+    NULL, highwayhash64_with_state_test },
+  { "HighwayHash128", "HighwayHash128",
+    256, 256, 128, 0xED3053F2,
+    NULL, highwayhash128_with_state_test },
+  { "HighwayHash256", "HighwayHash256",
+    256, 256, 256, 0x5FA30EF2,
+    NULL, highwayhash256_with_state_test },
 #endif
 #if defined(__x86_64__)
   { "metrohash64_1", "MetroHash64_1 for 64-bit",
