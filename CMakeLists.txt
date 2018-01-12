@@ -198,6 +198,7 @@ add_library(SMHasherSupport
   mum.cc
   jody_hash32.c
   jody_hash64.c
+  HighwayTest.c
 )
 
 add_executable(
@@ -211,4 +212,5 @@ target_link_libraries(
   ${CMAKE_THREAD_LIBS_INIT}
   gsl
   gslcblas
+  highwayhash
 )

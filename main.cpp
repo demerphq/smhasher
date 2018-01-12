@@ -7,6 +7,9 @@
 #include "Hashes.h"
 #include "SimpleStats.h"
 #include "PMurHash.h"
+#ifdef HAVE_HIGHWAY
+#include "HighwayTest.h"
+#endif
 #ifdef HAVE_BEAGLE_HASHES
 #include "BeagleHashes_test.h"
 #endif
@@ -325,6 +328,21 @@ HashInfo g_hashes[] =
   { "fasthash64", "fast-hash 64bit",
     64, 64, 64, 0xACB02426,
     NULL, fasthash64_test },
+#endif
+
+#ifdef HAVE_HIGHWAY
+  { "highwayhash64", "Google HighwayHash64",
+    64, 64, 64,0x8BA1D63D ,
+    NULL, highwayhash64_test },
+/*
+ * TODO: Uncomment this when Google's 128 and 256-bit C++ highway hash is frozen.
+  { "highwayhash128", "Google HighwayHash128",
+    128, 128, 128,0x8BA1D63D ,
+    NULL, highwayhash128_test },
+  { "highwayhash256", "Google HighwayHash256",
+    128, 128, 256,0x8BA1D63D ,
+    NULL, highwayhash256_test },
+*/
 #endif
 
   // CityHash
