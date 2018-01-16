@@ -131,13 +131,12 @@ HashInfo g_hashes[] =
 #endif
 
   // -- Message Digests/NIST Hash Functions.
-#if 0
   { "md5_128a", "MD5, with a 64 bit seed of the start state",
-    64, bitsizeof(unsigned long) * 4, 128, 0x92912D2E,
-    md5_seed_state, md5_with_state },
+    64, 256, 128, 0x51FD61C9,
+    NULL, md5_with_state },
   { "md5_32a", "MD5, first 32 bits, seeding of md5 start state",
-    64, bitsizeof(unsigned long) * 4, 32, 0x4B2DAA7D,
-    md5_seed_state, md5_32_with_state },
+    64, 256, 32, 0xF695A0BB,
+    NULL, md5_32_with_state },
   { "sha1_32a", "SHA1, 32 bit seed, returning first 32 bits",
     32, 32, 32, 0xED4CCEA0,
     NULL, sha1_32a_with_state },
@@ -147,7 +146,6 @@ HashInfo g_hashes[] =
   { "sha1_32b", "SHA1, 32 bit seed, first 32 bits xored with last 32 bits",
     32, 32, 32, 0xA2D9EDEF,
     NULL, sha1_32b_with_state },
-#endif
 
   // -- Others
   { "FNV1a", "Fowler-Noll-Vo hash, 32-bit",

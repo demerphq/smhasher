@@ -100,10 +100,10 @@ int md5_self_test( int verbose );
 #ifndef GET_ULONG_LE
 #define GET_ULONG_LE(n,b,i)                             \
 {                                                       \
-    (n) = ( (unsigned long) (b)[(i)    ]       )        \
-        | ( (unsigned long) (b)[(i) + 1] <<  8 )        \
-        | ( (unsigned long) (b)[(i) + 2] << 16 )        \
-        | ( (unsigned long) (b)[(i) + 3] << 24 );       \
+    (n) = ( (uint32_t) (b)[(i)    ]       )        \
+        | ( (uint32_t) (b)[(i) + 1] <<  8 )        \
+        | ( (uint32_t) (b)[(i) + 2] << 16 )        \
+        | ( (uint32_t) (b)[(i) + 3] << 24 );       \
 }
 #endif
 
@@ -133,7 +133,7 @@ void md5_starts( md5_context *ctx )
 
 static void md5_process( md5_context *ctx, unsigned char data[64] )
 {
-    unsigned long X[16], A, B, C, D;
+    uint32_t X[16], A, B, C, D;
 
     GET_ULONG_LE( X[ 0], data,  0 );
     GET_ULONG_LE( X[ 1], data,  4 );
@@ -205,7 +205,7 @@ static void md5_process( md5_context *ctx, unsigned char data[64] )
     P( B, C, D, A, 12, 20, 0x8D2A4C8A );
 
 #undef F
-    
+
 #define F(x,y,z) (x ^ y ^ z)
 
     P( A, B, C, D,  5,  4, 0xFFFA3942 );
@@ -260,7 +260,7 @@ static void md5_process( md5_context *ctx, unsigned char data[64] )
 void md5_update( md5_context *ctx, unsigned char *input, int ilen )
 {
     int fill;
-    unsigned long left;
+    uint32_t left;
 
     if( ilen <= 0 )
         return;
@@ -271,7 +271,7 @@ void md5_update( md5_context *ctx, unsigned char *input, int ilen )
     ctx->total[0] += ilen;
     ctx->total[0] &= 0xFFFFFFFF;
 
-    if( ctx->total[0] < (unsigned long) ilen )
+    if( ctx->total[0] < (uint32_t) ilen )
         ctx->total[1]++;
 
     if( left && ilen >= fill )
@@ -311,8 +311,8 @@ static const unsigned char md5_padding[64] =
  */
 void md5_finish( md5_context *ctx, unsigned char output[16] )
 {
-    unsigned long last, padn;
-    unsigned long high, low;
+    uint32_t last, padn;
+    uint32_t high, low;
     unsigned char msglen[8];
 
     high = ( ctx->total[0] >> 29 )
@@ -334,18 +334,10 @@ void md5_finish( md5_context *ctx, unsigned char output[16] )
     PUT_ULONG_LE( ctx->state[3], output, 12 );
 }
 
-void md5_seed_state(int seedbits, const void *seed, void *state) {
-    md5_context ctx;
-
-    md5_starts( &ctx );
-    ctx.state[0] += *((uint64_t*)seed);
-    memcpy(state, &ctx, sizeof(unsigned long)*4);
-}
-
 void md5_with_state( const void*input, int ilen, const void *state, void *output)
 {
     md5_context ctx;
-    memcpy(&ctx, state, sizeof(unsigned long) * 4);
+    memcpy(&ctx.state, state, 32);
     ctx.total[0] = ctx.total[1] = 0;
 
     md5_update( &ctx, (unsigned char *)input, ilen );
@@ -358,29 +350,3 @@ void md5_32_with_state( const void *input, int ilen, const void *state, void *ou
     md5_with_state((unsigned char *)input,ilen,state,buf);
     *((uint32_t*)out)= buf[0];
 }
-
-/*
- * output = MD5( input buffer )
- */
-void md5( unsigned char *input, int ilen, unsigned char output[16], uint32_t seed )
-{
-    md5_context ctx;
-
-    md5_starts( &ctx );
-    ctx.state[0] += seed;
-    md5_update( &ctx, input, ilen );
-    md5_finish( &ctx, output );
-
-    memset( &ctx, 0, sizeof( md5_context ) );
-}
-
-unsigned int md5hash( const void * input, int len, uint32_t seed )
-{
-  unsigned int hash[4];
-
-  md5((unsigned char *)input,len,(unsigned char *)hash, seed);
-
-  //return hash[0] ^ hash[1] ^ hash[2] ^ hash[3];
-
-  return hash[0];
-}	
