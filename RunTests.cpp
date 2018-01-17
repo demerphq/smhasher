@@ -148,11 +148,13 @@ bool testHash ( HashInfo * info, int self_test, double confidence )
         info->seedbits, info->hashbits);
 
     bool result = true;
-    const int reps = ((32000000 / info->hashbits) < 200000 ? 200000 : (32000000 / info->hashbits));
+    int reps = 32000000 / info->hashbits;
     double max_pct_error = 1.0 / 100.00;
     double max_error_ratio = 1.5;
     int size = 0;
     Rand r(923145681);
+    // do at least 400k tests
+    if(reps < 400000) reps = 400000;
     printf("# Samples %d, expected error %.8f, confidence level %.8f%%\n",
         reps, 0.00256 / ( (double)reps / 100000.0 ), confidence * 100);
     /* this is very ugly - but we cant use a variable for the bob size.
