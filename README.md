@@ -30,6 +30,20 @@ knowing the seed.
 I have tried to enhance the smhasher package to make it easier
 to test the scenario outlined above. Your mileage may vary.
 
+# BUILDING
+
+You will need cmake installed.
+
+The first time you build you will need to do something like this:
+
+    $ cmake .
+    $ ./make_smhasher
+
+The latter line will create a file based on the git status of your
+checkout called VERSION.h which is required for building. This is
+used to keep track of which version produced a given report. (Patches
+welcome to get CMake to do this for us.)
+
 # A New API for seeding Hash functions
 
 It would seem that smhasher was originally intended to test hash
