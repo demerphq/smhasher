@@ -590,6 +590,7 @@ bool TwoBytesTest2 ( hashfunc<hashtype> hash, int maxlen, double confidence, boo
   char name[1024];
   std::vector<hashtype> hashes;
 
+  hash.seed_state_zero();
   HashCallback<hashtype> c(hash,hashes);
 
   TwoBytesKeygen(maxlen,c,name);
