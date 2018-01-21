@@ -32,3 +32,4 @@ zlib/
 VERSION.h
 tsip.c
 funny_hash.h
+fanom_hash.h

@@ -188,6 +188,9 @@ ENDIF()
 IF(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/funny_hash.h")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DHAVE_FUNNY_HASH")
 ENDIF()
+IF(EXISTS "./fanom_hash.h")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DHAVE_FANOM_HASH")
+ENDIF()
 add_library(SMHasherSupport
   AvalancheTest.cpp
   Bitslice.cpp

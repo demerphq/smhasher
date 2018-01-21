@@ -298,3 +298,10 @@ funny_hash64_2_with_state_test(const void *key, int len, const void * state, voi
   *(uint64_t *) out = fh64_string_hash2(key, len, s64[0], s64[1]);
 }
 #endif
+
+#ifdef HAVE_FANOM_HASH
+void fanom_hash64_seed_state_test(int seed_bits, const void * seed, void *state);
+
+void fanom_hash64_with_state_test(const void *key, int len, const void * state, void *out);
+#endif
+
