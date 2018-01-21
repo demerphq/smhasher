@@ -500,3 +500,21 @@ void lua_v53_string_hash (const void *key, int len, const void *seed, void *out)
     h ^= ((h<<5) + (h>>2) + str[len-1]);
   *((uint32_t*)out)=h;
 }
+
+#ifdef HAVE_FANOM_HASH
+// Fast non-multiplicative hash function.
+// https://github.com/funny-falcon/fanom_hash
+#include "fanom_hash.h"
+void
+fanom_hash64_seed_state_test(int seed_bits, const void * seed, void *state)
+{
+    memcpy(state,seed,seed_bits/8);
+}
+
+void
+fanom_hash64_with_state_test(const void *key, int len, const void * state, void *out)
+{
+    uint64_t *s64 = (uint64_t *)state;
+  *(uint64_t *) out = fanom64_string_hash2(key, len, s64[0], s64[1] ^ 1);
+}
+#endif

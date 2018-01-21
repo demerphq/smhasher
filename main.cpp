@@ -192,6 +192,12 @@ HashInfo g_hashes[] =
     funny_hash64_2_seed_state_test, funny_hash64_2_with_state_test },
 #endif
 
+#ifdef HAVE_FANOM_HASH
+  { "FanomHash64", "Funny Falcon",
+    128, 128, 64, 0xF43E774E,
+    fanom_hash64_seed_state_test, fanom_hash64_with_state_test },
+#endif
+
 
   // MurmurHash2
   { "Murmur2", "MurmurHash2 for x86, 32-bit",
