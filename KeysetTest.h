@@ -301,11 +301,12 @@ bool CombinationKeyTest ( hashfunc<hashtype> hash, int maxlen, uint32_t * blocks
 // used by the Sparse tests in main.cpp
 
 template < typename keytype, typename hashtype >
-void SparseKeygenRecurse ( hashfunc<hashtype> hash, int start, int bitsleft, bool inclusive, keytype & k, std::vector<hashtype> & hashes, Rand &r )
+void SparseKeygenRecurse ( hashfunc<hashtype> hash, int start, int bitsleft, bool inclusive, keytype & k, std::vector<hashtype> & hashes, int seed )
 {
   const int nbytes = sizeof(keytype);
   const int nbits = nbytes * 8;
 
+  Rand r(seed);
   hashtype h;
   hash.seed_state_rand(r);
 
@@ -321,7 +322,7 @@ void SparseKeygenRecurse ( hashfunc<hashtype> hash, int start, int bitsleft, boo
 
     if(bitsleft > 1)
     {
-      SparseKeygenRecurse(hash,i+1,bitsleft-1,inclusive,k,hashes,r);
+      SparseKeygenRecurse(hash,i+1,bitsleft-1,inclusive,k,hashes,seed);
     }
 
     flipbit(&k,nbytes,i);
@@ -331,7 +332,7 @@ void SparseKeygenRecurse ( hashfunc<hashtype> hash, int start, int bitsleft, boo
 //----------
 // used by the Sparse tests in main.cpp
 template < int keybits, typename hashtype >
-bool SparseKeyTest ( hashfunc<hashtype> hash, const int setbits, bool inclusive, bool testColl, double confidence, bool drawDiagram, Rand &r )
+bool SparseKeyTest ( hashfunc<hashtype> hash, const int setbits, bool inclusive, bool testColl, double confidence, bool drawDiagram, int seed )
 {
   char name[1024];
   snprintf(name,1024,"Keyset 'Sparse' - %d-bit keys with %s %d bits set",
@@ -345,6 +346,7 @@ bool SparseKeyTest ( hashfunc<hashtype> hash, const int setbits, bool inclusive,
   keytype k;
   memset(&k,0,sizeof(k));
 
+  Rand r(seed);
   hash.seed_state_rand(r);
 
   if(inclusive)
@@ -356,7 +358,7 @@ bool SparseKeyTest ( hashfunc<hashtype> hash, const int setbits, bool inclusive,
     hashes.push_back(h);
   }
 
-  SparseKeygenRecurse(hash,0,setbits,inclusive,k,hashes,r);
+  SparseKeygenRecurse(hash,0,setbits,inclusive,k,hashes,seed);
 
   printf("%d keys\n",(int)hashes.size());
 
