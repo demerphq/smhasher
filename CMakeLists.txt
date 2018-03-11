@@ -39,6 +39,10 @@ IF(CMAKE_SYSTEM_NAME MATCHES "Linux")
    set(FALKHASH_OBJ      falkhash-elf64.o)
    STRING(REGEX REPLACE "^.*(aes).*$" "\\1" AES_THERE ${CPUINFO})
    STRING(COMPARE EQUAL "aes" "${AES_THERE}" AES_TRUE)
+   STRING(REGEX REPLACE "^.*(avx).*$" "\\1" AVX_THERE ${CPUINFO})
+   STRING(COMPARE EQUAL "avx" "${AVX_THERE}" AVX_TRUE)
+   STRING(REGEX REPLACE "^.*(avx2).*$" "\\1" AVX2_THERE ${CPUINFO})
+   STRING(COMPARE EQUAL "avx2" "${AVX2_THERE}" AVX2_TRUE)
 ELSEIF(CMAKE_SYSTEM_NAME MATCHES "Darwin")
    EXEC_PROGRAM("/usr/sbin/sysctl -n machdep.cpu.features" OUTPUT_VARIABLE
       CPUINFO)
@@ -49,6 +53,10 @@ ELSEIF(CMAKE_SYSTEM_NAME MATCHES "Darwin")
    set(FALKHASH_OBJ      falkhash-macho64.o)
    STRING(REGEX REPLACE "^.*(AES).*$" "\\1" AES_THERE ${CPUINFO})
    STRING(COMPARE EQUAL "AES" "${AES_THERE}" AES_TRUE)
+   STRING(REGEX REPLACE "^.*(AVX).*$" "\\1" AVX_THERE ${CPUINFO})
+   STRING(COMPARE EQUAL "AVX" "${AVX_THERE}" AVX_TRUE)
+   STRING(REGEX REPLACE "^.*(AVX2).*$" "\\1" AVX2_THERE ${CPUINFO})
+   STRING(COMPARE EQUAL "AVX2" "${AVX2_THERE}" AVX2_TRUE)
 ELSEIF(CMAKE_SYSTEM_NAME MATCHES "FreeBSD")
    EXEC_PROGRAM("grep Features /var/run/dmesg.boot" OUTPUT_VARIABLE
       CPUINFO)
@@ -59,6 +67,10 @@ ELSEIF(CMAKE_SYSTEM_NAME MATCHES "FreeBSD")
    set(FALKHASH_OBJ      falkhash-elf64.o)
    STRING(REGEX REPLACE "^.*(AES).*$" "\\1" AES_THERE ${CPUINFO})
    STRING(COMPARE EQUAL "AES" "${AES_THERE}" AES_TRUE)
+   STRING(REGEX REPLACE "^.*(AVX).*$" "\\1" AVX_THERE ${CPUINFO})
+   STRING(COMPARE EQUAL "AVX" "${AVX_THERE}" AVX_TRUE)
+   STRING(REGEX REPLACE "^.*(AVX2).*$" "\\1" AVX2_THERE ${CPUINFO})
+   STRING(COMPARE EQUAL "AVX2" "${AVX2_THERE}" AVX2_TRUE)
 ENDIF(CMAKE_SYSTEM_NAME MATCHES "Linux")
 
 if (CMAKE_COMPILER_IS_GNUCC
@@ -109,10 +121,33 @@ IF (AES_TRUE)
 ELSE (AES_TRUE)
   set(AES_FOUND false CACHE BOOL "AES-NI not available")
 ENDIF (AES_TRUE)
+IF (AES_TRUE)
+  add_definitions(-DAES_AVAIL=1)
+  set(AES_FOUND true CACHE BOOL "AES-NI available")
+ELSE (AES_TRUE)
+  set(AES_FOUND false CACHE BOOL "AES-NI not available")
+ENDIF (AES_TRUE)
+IF (AVX_TRUE)
+  add_definitions(-DAVX_AVAIL=1)
+  set(AVX_FOUND true CACHE BOOL "AVX available")
+ELSE (AVX_TRUE)
+  set(AVX_FOUND false CACHE BOOL "AVX not available")
+ENDIF (AVX_TRUE)
+IF (AVX2_TRUE)
+  add_definitions(-DAVX2_AVAIL=1)
+  set(AVX2_FOUND true CACHE BOOL "AVX2 available")
+ELSE (AVX2_TRUE)
+  set(AVX2_FOUND false CACHE BOOL "AVX2 not available")
+ENDIF (AVX2_TRUE)
 
 IF(AES_FOUND AND (CMAKE_SIZEOF_VOID_P EQUAL 8))
   set(SSE4_OBJ        ${FALKHASH_OBJ})
 ENDIF()
+
+set(T1HA_SRC t1ha/t1ha0.c t1ha/t1ha1.c t1ha/t1ha2.c t1ha/t1ha0_ia32aes_noavx.c t1ha/t1ha0_ia32aes_avx.c t1ha/t1ha0_ia32aes_avx2.c)
+set_source_files_properties(t1ha/t1ha0_ia32aes_noavx.c PROPERTIES COMPILE_FLAGS "-mno-avx2 -mno-avx -maes")
+set_source_files_properties(t1ha/t1ha0_ia32aes_avx.c PROPERTIES COMPILE_FLAGS "-mno-avx2 -mavx -maes")
+set_source_files_properties(t1ha/t1ha0_ia32aes_avx2.c PROPERTIES COMPILE_FLAGS "-mavx -mavx2 -maes")
 
 IF(SSE4_2_FOUND)
   SET(CMAKE_THREAD_LIBS_INIT "-lpthread")
@@ -167,7 +202,7 @@ add_library(SMHasherSupport
   TAP.cpp
   Types.cpp
   Hashes.cpp
-  
+
   City.cpp
   CityTest.cpp
   MurmurHash1.cpp
@@ -182,8 +217,7 @@ add_library(SMHasherSupport
   md5.cpp
   mum.cc
   sha1.cpp
-  t1ha.c
-  
+  ${T1HA_SRC}
   ${64ONLY_SRC}
   ${BEAGLE_SRC}
   ${METROCRC128_SRC}
@@ -194,7 +228,6 @@ add_library(SMHasherSupport
   ${SSE4_SRC1}
   ${SSE4_SRC}
   ${TSIP_SRC}
-  t1ha.c
   mum.cc
   jody_hash32.c
   jody_hash64.c

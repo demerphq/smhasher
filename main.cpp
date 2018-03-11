@@ -414,28 +414,45 @@ HashInfo g_hashes[] =
     64, 64, 64, 0x211CE75E,
     NULL, falkhash_with_state_test_cxx },
 #endif
-  { "t1ha", "Fast Positive Hash - portable, 64-bit, little-endian",
+  { "t1ha2_atonce", "Fast Positive Hash - portable, 64-bit, little-endian",
+    64 /*seed*/, 128 /*state*/, 64 /*hash*/, 0x7684968D,
+    NULL, t1ha2_atonce_test },
+  { "t1ha2_stream", "Fast Positive Hash - portable, 64-bit, little-endian",
+    128 /*seed*/, 128 /*state*/, 64 /*hash*/, 0x89C75BC2,
+    NULL, t1ha2_stream_test },
+  { "t1ha2_atonce128", "Fast Positive Hash - portable, 128-bit, little-endian",
+    64 /*seed*/, 256 /*state*/, 128 /*hash*/, 0xEB6DBB0F,
+    NULL, t1ha2_atonce128_test },
+  { "t1ha2_stream128", "Fast Positive Hash - portable, 128-bit, little-endian",
+    128 /*seed*/, 256 /*state*/, 128 /*hash*/, 0x3E022C62,
+    NULL, t1ha2_stream128_test },
+
+  { "t1ha1_64le", "Fast Positive Hash - portable, 64-bit, little-endian",
     64, 64, 64, 0xA18A4E0E,
-    NULL, t1ha_with_state_test },
-  { "t1ha_64be", "Fast Positive Hash - portable, 64-bit, big-endian",
+    NULL, t1ha1_64le_test },
+  { "t1ha1_64be", "Fast Positive Hash - portable, 64-bit, big-endian",
     64, 64, 64, 0xF8FFDED6,
-    NULL, t1ha_64be_with_state_test },
-  { "t1ha_32le", "Fast Positive Hash - portable, 32-bit, little-endian",
-    64, 64, 64, 0xE42B362F,
-    NULL, t1ha_32le_with_state_test },
-  { "t1ha_32be", "Fast Positive Hash - portable, 32-bit, big-endian",
-    64, 64, 64, 0xF0C501EB,
-    NULL, t1ha_32be_with_state_test },
-#if (defined(__SSE4_2__) && defined(__x86_64__)) || defined(_M_X64)
-  { "t1ha_crc", "Fast Positive Hash - requires SSE4.2 CRC32C",
-    64, 64, 64, 0x20BD585A,
-    NULL, t1ha_crc_with_state_test },
-#endif
-#if defined(__AES__) || defined(_M_X64) || defined(_M_IX86)
-  { "t1ha_aes", "Fast Positive Hash - requires: AES-NI",
-    64, 64, 64, 0x62ACCBC1,
-    NULL, t1ha_aes_with_state_test },
-#endif
+    NULL, t1ha1_64be_test },
+  { "t1ha0_32le", "Fast Positive Hash - portable, 32-bit, little-endian",
+    64, 64, 64, 0xF4939427,
+    NULL, t1ha0_32le_test },
+  { "t1ha0_32be", "Fast Positive Hash - portable, 32-bit, big-endian",
+    64, 64, 64, 0x4A7AF6D4,
+    NULL, t1ha0_32be_test },
+#ifdef AES_AVAIL
+  { "t1ha0_ia32aes_noavx", "Fast Positive Hash - requires: AES-NI",
+    64, 64, 64, 0x4EEE0EC3,
+    NULL, t1ha0_ia32aes_noavx_test },
+#ifdef AVX_AVAIL
+  { "t1ha0_ia32aes_avx1", "Fast Positive Hash - requires: AES-NI, AVX",
+    64, 64, 64, 0x4EEE0EC3,
+    NULL, t1ha0_ia32aes_avx_test },
+  { "t1ha0_ia32aes_avx2", "Fast Positive Hash - requires: AES-NI, AVX",
+    64, 64, 64, 0xBF142B1F,
+    NULL, t1ha0_ia32aes_avx2_test },
+#endif /* AVX_AVAIL */
+#endif /* AES_AVAIL */
+
 #if defined(__GNUC__) && UINT_MAX != ULONG_MAX
 #define MUM_VERIFY 0xE9816A4F
 #else
@@ -565,7 +582,7 @@ int main ( int argc, char ** argv )
 #if (defined(__x86_64__) && __SSE4_2__) || defined(_M_X64) || defined(_X86_64_)
   const char * defaulthash = "metrohash64crc_1"; /* "murmur3a"; */
 #else
-  const char * defaulthash = "t1ha_32le";
+  const char * defaulthash = "t1ha2_atonce";
 #endif
   const char * hashToTest = defaulthash;
   bool opt_validate = false;
