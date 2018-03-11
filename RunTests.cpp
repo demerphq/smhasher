@@ -227,11 +227,17 @@ bool testHash ( HashInfo * info, int self_test, double confidence )
     if (!size || size == 256)
     result &= AvalancheTest< Blob<256>, hashtype > (
           hash, reps, r, confidence, max_pct_error, max_error_ratio);
+    if (!size || size == 520)
+    result &= AvalancheTest< Blob<520>, hashtype > (
+          hash, reps, r, confidence, max_pct_error, max_error_ratio);
     if (!size || size == 512)
     result &= AvalancheTest< Blob<512>, hashtype > (
           hash, reps, r, confidence, max_pct_error, max_error_ratio);
-    if (!size || size == 520)
-    result &= AvalancheTest< Blob<520>, hashtype > (
+    if (!size || size == 1024)
+    result &= AvalancheTest< Blob<1024>, hashtype > (
+          hash, reps, r, confidence, max_pct_error, max_error_ratio);
+    if (!size || size == 2048)
+    result &= AvalancheTest< Blob<2048>, hashtype > (
           hash, reps, r, confidence, max_pct_error, max_error_ratio);
   }
 
