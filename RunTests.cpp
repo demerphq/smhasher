@@ -148,7 +148,7 @@ bool testHash ( HashInfo * info, int self_test, double confidence )
         info->seedbits, info->hashbits);
 
     bool result = true;
-    const int reps = 32000000 / info->hashbits;
+    const int reps = 100000 * 2 * 2;
     double max_pct_error = 1.0 / 100.00;
     double max_error_ratio = 1.5;
     int size = 0;
@@ -227,11 +227,17 @@ bool testHash ( HashInfo * info, int self_test, double confidence )
     if (!size || size == 256)
     result &= AvalancheTest< Blob<256>, hashtype > (
           hash, reps, r, confidence, max_pct_error, max_error_ratio);
+    if (!size || size == 520)
+    result &= AvalancheTest< Blob<520>, hashtype > (
+          hash, reps, r, confidence, max_pct_error, max_error_ratio);
     if (!size || size == 512)
     result &= AvalancheTest< Blob<512>, hashtype > (
           hash, reps, r, confidence, max_pct_error, max_error_ratio);
-    if (!size || size == 520)
-    result &= AvalancheTest< Blob<520>, hashtype > (
+    if (!size || size == 1024)
+    result &= AvalancheTest< Blob<1024>, hashtype > (
+          hash, reps, r, confidence, max_pct_error, max_error_ratio);
+    if (!size || size == 2048)
+    result &= AvalancheTest< Blob<2048>, hashtype > (
           hash, reps, r, confidence, max_pct_error, max_error_ratio);
   }
 
@@ -301,16 +307,19 @@ bool testHash ( HashInfo * info, int self_test, double confidence )
 
     bool result = true;
     bool drawDiagram = false;
-    Rand r(8075093);
+    int seed = 8075093;
 
-    result &= SparseKeyTest<  32,hashtype>(hash,6,true,true,confidence, drawDiagram, r);
-    result &= SparseKeyTest<  40,hashtype>(hash,6,true,true,confidence, drawDiagram, r);
-    result &= SparseKeyTest<  48,hashtype>(hash,5,true,true,confidence, drawDiagram, r);
-    result &= SparseKeyTest<  56,hashtype>(hash,5,true,true,confidence, drawDiagram, r);
-    result &= SparseKeyTest<  64,hashtype>(hash,5,true,true,confidence, drawDiagram, r);
-    result &= SparseKeyTest<  96,hashtype>(hash,4,true,true,confidence, drawDiagram, r);
-    result &= SparseKeyTest< 256,hashtype>(hash,3,true,true,confidence, drawDiagram, r);
-    result &= SparseKeyTest<2048,hashtype>(hash,2,true,true,confidence, drawDiagram, r);
+    result &= SparseKeyTest<4096,hashtype>(hash,2,true,true,confidence, drawDiagram, seed);
+    result &= SparseKeyTest<2048,hashtype>(hash,2,true,true,confidence, drawDiagram, seed);
+    result &= SparseKeyTest<1024,hashtype>(hash,2,true,true,confidence, drawDiagram, seed);
+    result &= SparseKeyTest< 512,hashtype>(hash,2,true,true,confidence, drawDiagram, seed);
+    result &= SparseKeyTest< 256,hashtype>(hash,3,true,true,confidence, drawDiagram, seed);
+    result &= SparseKeyTest<  32,hashtype>(hash,6,true,true,confidence, drawDiagram, seed);
+    result &= SparseKeyTest<  40,hashtype>(hash,6,true,true,confidence, drawDiagram, seed);
+    result &= SparseKeyTest<  48,hashtype>(hash,5,true,true,confidence, drawDiagram, seed);
+    result &= SparseKeyTest<  56,hashtype>(hash,5,true,true,confidence, drawDiagram, seed);
+    result &= SparseKeyTest<  64,hashtype>(hash,5,true,true,confidence, drawDiagram, seed);
+    result &= SparseKeyTest<  96,hashtype>(hash,4,true,true,confidence, drawDiagram, seed);
 
     pass &= ok(result, "Keyset 'Sparse'", info->name);
   }
