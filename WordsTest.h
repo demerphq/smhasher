@@ -3,7 +3,9 @@
 #include <fstream>
 template < typename hashtype >
 bool WordsTest( hashfunc<hashtype> hash, double confidence) {
-    std::vector<hashtype> hashes(200000);
+    std::vector<hashtype> hashes;
+    std::set<std::string> words;
+    std::set<std::string>::iterator it;
     std::string line;
     std::string filename= "/usr/share/dict/words";
     int count= 0;
@@ -19,20 +21,20 @@ bool WordsTest( hashfunc<hashtype> hash, double confidence) {
     while ( getline (wordfile,line) )
     {
         lines++;
-        if (count+3 >= hashes.size())
-            hashes.resize(count+100);
-
-        hash(line.c_str(),line.length(),&hashes[count++]);
-
+        words.insert(line);
         line.append("!");
-        hash(line.c_str(),line.length(),&hashes[count++]);
-
+        words.insert(line);
         line.append("!");
-        hash(line.c_str(),line.length(),&hashes[count++]);
+        words.insert(line);
     }
     wordfile.close();
-    hashes.resize(count);
+    hashes.resize(words.size());
+    for ( it = words.begin(); it != words.end(); it++ )
+    {
+        line = *it;
+        hash(line.c_str(),line.length(),&hashes[count++]);
+    }
     printf("# Hashed %d keys from %d words from file '%s'\n",
-            lines, count, filename.c_str());
+            count, lines, filename.c_str());
     return TestHashList<hashtype>(hashes,true,confidence,false,"Keyset 'Words'");
 }
