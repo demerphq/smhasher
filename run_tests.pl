@@ -7,6 +7,7 @@ while (1) {
     my %byname;
     my @names;
     foreach my $line (@hashlines) {
+        next if $line=~/SBOX/;
         my $info= {};
         my @info= split /\t/, $line;
         @$info{'name','seedbits','statebits','hashbits'}= @info;
