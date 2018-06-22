@@ -1,175 +1,175 @@
-ok 1 - Found Hash # md5_128a
+ok 1 - Found Hash # t1ha2_atonce128
 ###################################################################
-### Testing md5_128a - no seed_state
-### - MD5, with a 64 bit seed of the start state -
+### Testing t1ha2_atonce128 - no seed_state
+### - Fast Positive Hash - portable, 128-bit, little-endian -
 ### seedbits: 64 statebits: 256 hashbits: 128
 ###################################################################
-ok 2 - Verification code # md5_128a
-# md5_128a             - Verification value 0x51FD61C9 : Passed.
+ok 2 - Verification code # t1ha2_atonce128
+# t1ha2_atonce128      - Verification value 0xEB6DBB0F : Passed.
 ### Sanity Tests ###
 # Sanity check simple key bit flips and consistency - hashbytes=16..........
-ok 3 - SanityTest # md5_128a
+ok 3 - SanityTest # t1ha2_atonce128
 # Sanity check null suffixes change the hash (simple)..........
-ok 4 - Appended Zeroes Test # md5_128a
-ok 5 - Sanity Test # md5_128a
+ok 4 - Appended Zeroes Test # t1ha2_atonce128
+ok 5 - Sanity Test # t1ha2_atonce128
 ### Speed Tests ###
 ## Bulk speed test - 262144-byte keys
-# Alignment  7 -  0.142 bytes/cycle -  406.18 MiB/sec @ 3 ghz
-# Alignment  6 -  0.145 bytes/cycle -  415.39 MiB/sec @ 3 ghz
-# Alignment  5 -  0.145 bytes/cycle -  414.31 MiB/sec @ 3 ghz
-# Alignment  4 -  0.145 bytes/cycle -  415.83 MiB/sec @ 3 ghz
-# Alignment  3 -  0.145 bytes/cycle -  415.78 MiB/sec @ 3 ghz
-# Alignment  2 -  0.145 bytes/cycle -  415.72 MiB/sec @ 3 ghz
-# Alignment  1 -  0.145 bytes/cycle -  414.36 MiB/sec @ 3 ghz
-# Alignment  0 -  0.145 bytes/cycle -  415.14 MiB/sec @ 3 ghz
-# Average      -  0.145 bytes/cycle -  414.09 MiB/sec @ 3 ghz
+# Alignment  7 -  4.997 bytes/cycle - 14296.69 MiB/sec @ 3 ghz
+# Alignment  6 -  4.997 bytes/cycle - 14296.83 MiB/sec @ 3 ghz
+# Alignment  5 -  4.997 bytes/cycle - 14296.16 MiB/sec @ 3 ghz
+# Alignment  4 -  4.996 bytes/cycle - 14294.89 MiB/sec @ 3 ghz
+# Alignment  3 -  4.997 bytes/cycle - 14296.55 MiB/sec @ 3 ghz
+# Alignment  2 -  4.997 bytes/cycle - 14296.41 MiB/sec @ 3 ghz
+# Alignment  1 -  4.997 bytes/cycle - 14296.46 MiB/sec @ 3 ghz
+# Alignment  0 -  5.047 bytes/cycle - 14439.15 MiB/sec @ 3 ghz
+# Average      -  5.003 bytes/cycle - 14314.14 MiB/sec @ 3 ghz
 ## KeySpeed tests
-# md5_128a                  0 byte keys      478.558 c/h
-# md5_128a                  1 byte keys      484.935 c/h      484.935 c/b        0.002 b/c
-# md5_128a                  2 byte keys      480.694 c/h      240.347 c/b        0.004 b/c
-# md5_128a                  3 byte keys      483.873 c/h      161.291 c/b        0.006 b/c
-# md5_128a                  4 byte keys      484.827 c/h      121.207 c/b        0.008 b/c
-# md5_128a                  5 byte keys      503.085 c/h      100.617 c/b        0.010 b/c
-# md5_128a                  6 byte keys      485.655 c/h       80.942 c/b        0.012 b/c
-# md5_128a                  7 byte keys      485.717 c/h       69.388 c/b        0.014 b/c
-# md5_128a                  8 byte keys      506.863 c/h       63.358 c/b        0.016 b/c
-# md5_128a                  9 byte keys      479.638 c/h       53.293 c/b        0.019 b/c
-# md5_128a                 10 byte keys      506.327 c/h       50.633 c/b        0.020 b/c
-# md5_128a                 11 byte keys      479.948 c/h       43.632 c/b        0.023 b/c
-# md5_128a                 12 byte keys      486.126 c/h       40.511 c/b        0.025 b/c
-# md5_128a                 13 byte keys      488.260 c/h       37.558 c/b        0.027 b/c
-# md5_128a                 14 byte keys      480.600 c/h       34.329 c/b        0.029 b/c
-# md5_128a                 15 byte keys      486.035 c/h       32.402 c/b        0.031 b/c
-# md5_128a                 16 byte keys      510.887 c/h       31.930 c/b        0.031 b/c
-# md5_128a                 17 byte keys      487.470 c/h       28.675 c/b        0.035 b/c
-# md5_128a                 18 byte keys      487.268 c/h       27.070 c/b        0.037 b/c
-# md5_128a                 19 byte keys      510.346 c/h       26.860 c/b        0.037 b/c
-# md5_128a                 20 byte keys      482.417 c/h       24.121 c/b        0.041 b/c
-# md5_128a                 21 byte keys      483.049 c/h       23.002 c/b        0.043 b/c
-# md5_128a                 22 byte keys      483.095 c/h       21.959 c/b        0.046 b/c
-# md5_128a                 23 byte keys      485.544 c/h       21.111 c/b        0.047 b/c
-# md5_128a                 24 byte keys      482.480 c/h       20.103 c/b        0.050 b/c
-# md5_128a                 25 byte keys      481.560 c/h       19.262 c/b        0.052 b/c
-# md5_128a                 26 byte keys      481.656 c/h       18.525 c/b        0.054 b/c
-# md5_128a                 27 byte keys      480.537 c/h       17.798 c/b        0.056 b/c
-# md5_128a                 28 byte keys      481.372 c/h       17.192 c/b        0.058 b/c
-# md5_128a                 29 byte keys      480.026 c/h       16.553 c/b        0.060 b/c
-# md5_128a                 30 byte keys      480.224 c/h       16.007 c/b        0.062 b/c
-# md5_128a                 31 byte keys      480.694 c/h       15.506 c/b        0.064 b/c
-#                          Average < 32      486.868 c/h       31.411 c/b        0.032 b/c
-# md5_128a                 32 byte keys      484.735 c/h       15.148 c/b        0.066 b/c
-# md5_128a                 36 byte keys      484.653 c/h       13.463 c/b        0.074 b/c
-# md5_128a                 40 byte keys      482.850 c/h       12.071 c/b        0.083 b/c
-# md5_128a                 44 byte keys      482.124 c/h       10.957 c/b        0.091 b/c
-# md5_128a                 48 byte keys      482.728 c/h       10.057 c/b        0.099 b/c
-# md5_128a                 52 byte keys      483.490 c/h        9.298 c/b        0.108 b/c
-# md5_128a                 56 byte keys      910.741 c/h       16.263 c/b        0.061 b/c
-# md5_128a                 60 byte keys      908.833 c/h       15.147 c/b        0.066 b/c
-# md5_128a                 64 byte keys      908.532 c/h       14.196 c/b        0.070 b/c
-# md5_128a                 68 byte keys      913.488 c/h       13.434 c/b        0.074 b/c
-# md5_128a                 72 byte keys      910.390 c/h       12.644 c/b        0.079 b/c
-# md5_128a                 76 byte keys      913.187 c/h       12.016 c/b        0.083 b/c
-# md5_128a                 80 byte keys      921.044 c/h       11.513 c/b        0.087 b/c
-# md5_128a                 84 byte keys      916.686 c/h       10.913 c/b        0.092 b/c
-# md5_128a                 88 byte keys      915.619 c/h       10.405 c/b        0.096 b/c
-# md5_128a                 92 byte keys      912.190 c/h        9.915 c/b        0.101 b/c
-# md5_128a                 96 byte keys      923.736 c/h        9.622 c/b        0.104 b/c
-# md5_128a                100 byte keys      926.405 c/h        9.264 c/b        0.108 b/c
-# md5_128a                104 byte keys      922.171 c/h        8.867 c/b        0.113 b/c
-# md5_128a                108 byte keys      918.038 c/h        8.500 c/b        0.118 b/c
-# md5_128a                112 byte keys      913.486 c/h        8.156 c/b        0.123 b/c
-# md5_128a                116 byte keys      915.117 c/h        7.889 c/b        0.127 b/c
-# md5_128a                120 byte keys     1345.680 c/h       11.214 c/b        0.089 b/c
-# md5_128a                124 byte keys     1348.448 c/h       10.875 c/b        0.092 b/c
-#                         Average < 128      639.717 c/h       15.128 c/b        0.066 b/c
-# md5_128a                128 byte keys     1335.723 c/h       10.435 c/b        0.096 b/c
-# md5_128a                256 byte keys     2192.176 c/h        8.563 c/b        0.117 b/c
-# md5_128a                512 byte keys     4065.339 c/h        7.940 c/b        0.126 b/c
-# md5_128a               1024 byte keys     7506.487 c/h        7.331 c/b        0.136 b/c
-# md5_128a               2048 byte keys    14330.708 c/h        6.997 c/b        0.143 b/c
-# md5_128a               4096 byte keys    28438.731 c/h        6.943 c/b        0.144 b/c
-# md5_128a               8192 byte keys    55554.313 c/h        6.782 c/b        0.147 b/c
-# md5_128a              16384 byte keys   112060.969 c/h        6.840 c/b        0.146 b/c
-# md5_128a              32768 byte keys   225069.318 c/h        6.869 c/b        0.146 b/c
-# md5_128a              65536 byte keys   448620.801 c/h        6.845 c/b        0.146 b/c
-#                       Overall Average    14166.647 c/h        7.014 c/b        0.143 b/c
-ok 6 - Speed (always passes) # md5_128a
+# t1ha2_atonce128           0 byte keys       18.000 c/h
+# t1ha2_atonce128           1 byte keys       44.997 c/h       44.997 c/b        0.022 b/c
+# t1ha2_atonce128           2 byte keys       44.997 c/h       22.498 c/b        0.044 b/c
+# t1ha2_atonce128           3 byte keys       44.996 c/h       14.999 c/b        0.067 b/c
+# t1ha2_atonce128           4 byte keys       44.990 c/h       11.247 c/b        0.089 b/c
+# t1ha2_atonce128           5 byte keys       44.993 c/h        8.999 c/b        0.111 b/c
+# t1ha2_atonce128           6 byte keys       44.997 c/h        7.499 c/b        0.133 b/c
+# t1ha2_atonce128           7 byte keys       44.996 c/h        6.428 c/b        0.156 b/c
+# t1ha2_atonce128           8 byte keys       32.998 c/h        4.125 c/b        0.242 b/c
+# t1ha2_atonce128           9 byte keys       43.631 c/h        4.848 c/b        0.206 b/c
+# t1ha2_atonce128          10 byte keys       43.430 c/h        4.343 c/b        0.230 b/c
+# t1ha2_atonce128          11 byte keys       43.485 c/h        3.953 c/b        0.253 b/c
+# t1ha2_atonce128          12 byte keys       43.496 c/h        3.625 c/b        0.276 b/c
+# t1ha2_atonce128          13 byte keys       43.637 c/h        3.357 c/b        0.298 b/c
+# t1ha2_atonce128          14 byte keys       43.516 c/h        3.108 c/b        0.322 b/c
+# t1ha2_atonce128          15 byte keys       43.475 c/h        2.898 c/b        0.345 b/c
+# t1ha2_atonce128          16 byte keys       36.900 c/h        2.306 c/b        0.434 b/c
+# t1ha2_atonce128          17 byte keys       42.000 c/h        2.471 c/b        0.405 b/c
+# t1ha2_atonce128          18 byte keys       42.000 c/h        2.333 c/b        0.429 b/c
+# t1ha2_atonce128          19 byte keys       42.000 c/h        2.211 c/b        0.452 b/c
+# t1ha2_atonce128          20 byte keys       42.000 c/h        2.100 c/b        0.476 b/c
+# t1ha2_atonce128          21 byte keys       42.000 c/h        2.000 c/b        0.500 b/c
+# t1ha2_atonce128          22 byte keys       42.000 c/h        1.909 c/b        0.524 b/c
+# t1ha2_atonce128          23 byte keys       42.000 c/h        1.826 c/b        0.548 b/c
+# t1ha2_atonce128          24 byte keys       41.000 c/h        1.708 c/b        0.585 b/c
+# t1ha2_atonce128          25 byte keys       45.241 c/h        1.810 c/b        0.553 b/c
+# t1ha2_atonce128          26 byte keys       45.000 c/h        1.731 c/b        0.578 b/c
+# t1ha2_atonce128          27 byte keys       45.000 c/h        1.667 c/b        0.600 b/c
+# t1ha2_atonce128          28 byte keys       45.000 c/h        1.607 c/b        0.622 b/c
+# t1ha2_atonce128          29 byte keys       45.000 c/h        1.552 c/b        0.644 b/c
+# t1ha2_atonce128          30 byte keys       45.000 c/h        1.500 c/b        0.667 b/c
+# t1ha2_atonce128          31 byte keys       45.000 c/h        1.452 c/b        0.689 b/c
+#                          Average < 32       42.430 c/h        2.737 c/b        0.365 b/c
+# t1ha2_atonce128          32 byte keys       45.000 c/h        1.406 c/b        0.711 b/c
+# t1ha2_atonce128          36 byte keys       43.000 c/h        1.194 c/b        0.837 b/c
+# t1ha2_atonce128          40 byte keys       39.995 c/h        1.000 c/b        1.000 b/c
+# t1ha2_atonce128          44 byte keys       45.000 c/h        1.023 c/b        0.978 b/c
+# t1ha2_atonce128          48 byte keys       42.969 c/h        0.895 c/b        1.117 b/c
+# t1ha2_atonce128          52 byte keys       47.998 c/h        0.923 c/b        1.083 b/c
+# t1ha2_atonce128          56 byte keys       47.994 c/h        0.857 c/b        1.167 b/c
+# t1ha2_atonce128          60 byte keys       49.999 c/h        0.833 c/b        1.200 b/c
+# t1ha2_atonce128          64 byte keys       39.000 c/h        0.609 c/b        1.641 b/c
+# t1ha2_atonce128          68 byte keys       46.993 c/h        0.691 c/b        1.447 b/c
+# t1ha2_atonce128          72 byte keys       45.000 c/h        0.625 c/b        1.600 b/c
+# t1ha2_atonce128          76 byte keys       49.814 c/h        0.655 c/b        1.526 b/c
+# t1ha2_atonce128          80 byte keys       48.998 c/h        0.612 c/b        1.633 b/c
+# t1ha2_atonce128          84 byte keys       53.009 c/h        0.631 c/b        1.585 b/c
+# t1ha2_atonce128          88 byte keys       53.008 c/h        0.602 c/b        1.660 b/c
+# t1ha2_atonce128          92 byte keys       55.823 c/h        0.607 c/b        1.648 b/c
+# t1ha2_atonce128          96 byte keys       46.412 c/h        0.483 c/b        2.068 b/c
+# t1ha2_atonce128         100 byte keys       54.485 c/h        0.545 c/b        1.835 b/c
+# t1ha2_atonce128         104 byte keys       52.985 c/h        0.509 c/b        1.963 b/c
+# t1ha2_atonce128         108 byte keys       55.969 c/h        0.518 c/b        1.930 b/c
+# t1ha2_atonce128         112 byte keys       55.977 c/h        0.500 c/b        2.001 b/c
+# t1ha2_atonce128         116 byte keys       60.808 c/h        0.524 c/b        1.908 b/c
+# t1ha2_atonce128         120 byte keys       60.410 c/h        0.503 c/b        1.986 b/c
+# t1ha2_atonce128         124 byte keys       62.000 c/h        0.500 c/b        2.000 b/c
+#                         Average < 128       45.722 c/h        1.081 c/b        0.925 b/c
+# t1ha2_atonce128         128 byte keys       51.572 c/h        0.403 c/b        2.482 b/c
+# t1ha2_atonce128         256 byte keys       92.757 c/h        0.362 c/b        2.760 b/c
+# t1ha2_atonce128         512 byte keys      144.250 c/h        0.282 c/b        3.549 b/c
+# t1ha2_atonce128        1024 byte keys      243.479 c/h        0.238 c/b        4.206 b/c
+# t1ha2_atonce128        2048 byte keys      435.564 c/h        0.213 c/b        4.702 b/c
+# t1ha2_atonce128        4096 byte keys      863.630 c/h        0.211 c/b        4.743 b/c
+# t1ha2_atonce128        8192 byte keys     1666.317 c/h        0.203 c/b        4.916 b/c
+# t1ha2_atonce128       16384 byte keys     3328.142 c/h        0.203 c/b        4.923 b/c
+# t1ha2_atonce128       32768 byte keys     6624.777 c/h        0.202 c/b        4.946 b/c
+# t1ha2_atonce128       65536 byte keys    12975.263 c/h        0.198 c/b        5.051 b/c
+#                       Overall Average      439.184 c/h        0.217 c/b        4.599 b/c
+ok 6 - Speed (always passes) # t1ha2_atonce128
 ### Differential Tests ###
 # Testing 8303632 up-to-5-bit differentials in 64-bit keys -> 128 bit hashes.
 # 1000 reps, 8303632000 total tests, expecting 0.00 random collisions..........
-ok 7 - Differential collisions # md5_128a
-ok 8 - Nothing skipped during differential collision check # md5_128a
+ok 7 - Differential collisions # t1ha2_atonce128
+ok 8 - Nothing skipped during differential collision check # t1ha2_atonce128
 # 0 total collisions, of which 0 single collisions were ignored
 ok 9 - ProcessDifferentials
 # Testing 11017632 up-to-4-bit differentials in 128-bit keys -> 128 bit hashes.
 # 1000 reps, 11017632000 total tests, expecting 0.00 random collisions..........
-ok 10 - Differential collisions # md5_128a
-ok 11 - Nothing skipped during differential collision check # md5_128a
+ok 10 - Differential collisions # t1ha2_atonce128
+ok 11 - Nothing skipped during differential collision check # t1ha2_atonce128
 # 0 total collisions, of which 0 single collisions were ignored
 ok 12 - ProcessDifferentials
 # Testing 2796416 up-to-3-bit differentials in 256-bit keys -> 128 bit hashes.
 # 1000 reps, 2796416000 total tests, expecting 0.00 random collisions..........
-ok 13 - Differential collisions # md5_128a
-ok 14 - Nothing skipped during differential collision check # md5_128a
+ok 13 - Differential collisions # t1ha2_atonce128
+ok 14 - Nothing skipped during differential collision check # t1ha2_atonce128
 # 0 total collisions, of which 0 single collisions were ignored
 ok 15 - ProcessDifferentials
-ok 16 - Differential # md5_128a
+ok 16 - Differential # t1ha2_atonce128
 ### Avalanche Tests ### - seed-bits: 64 hash-bits: 128
 # Samples 400000, expected error 0.00064000, confidence level 99.99994267%
-# Testing   0-bit keys.......... ok.     # worst-bit:   0.715% error-ratio: 9.867451e-01
-ok 17 - Strict Avalanche Criteria - 0 bit/0 byte keys # md5_128a
-# Testing   8-bit keys.......... ok.     # worst-bit:   0.611% error-ratio: 9.944534e-01
-ok 18 - Strict Avalanche Criteria - 8 bit/1 byte keys # md5_128a
-# Testing  16-bit keys.......... ok.     # worst-bit:   0.652% error-ratio: 9.960252e-01
-ok 19 - Strict Avalanche Criteria - 16 bit/2 byte keys # md5_128a
-# Testing  24-bit keys.......... ok.     # worst-bit:   0.734% error-ratio: 9.969101e-01
-ok 20 - Strict Avalanche Criteria - 24 bit/3 byte keys # md5_128a
-# Testing  32-bit keys.......... ok.     # worst-bit:   0.599% error-ratio: 1.001683e+00
-ok 21 - Strict Avalanche Criteria - 32 bit/4 byte keys # md5_128a
-# Testing  40-bit keys.......... ok.     # worst-bit:   0.611% error-ratio: 1.009912e+00
-ok 22 - Strict Avalanche Criteria - 40 bit/5 byte keys # md5_128a
-# Testing  48-bit keys.......... ok.     # worst-bit:   0.604% error-ratio: 9.651101e-01
-ok 23 - Strict Avalanche Criteria - 48 bit/6 byte keys # md5_128a
-# Testing  56-bit keys.......... ok.     # worst-bit:   0.697% error-ratio: 1.001261e+00
-ok 24 - Strict Avalanche Criteria - 56 bit/7 byte keys # md5_128a
-# Testing  64-bit keys.......... ok.     # worst-bit:   0.580% error-ratio: 9.655050e-01
-ok 25 - Strict Avalanche Criteria - 64 bit/8 byte keys # md5_128a
-# Testing  72-bit keys.......... ok.     # worst-bit:   0.657% error-ratio: 9.942593e-01
-ok 26 - Strict Avalanche Criteria - 72 bit/9 byte keys # md5_128a
-# Testing  80-bit keys.......... ok.     # worst-bit:   0.596% error-ratio: 1.008216e+00
-ok 27 - Strict Avalanche Criteria - 80 bit/10 byte keys # md5_128a
-# Testing  88-bit keys.......... ok.     # worst-bit:   0.734% error-ratio: 9.856985e-01
-ok 28 - Strict Avalanche Criteria - 88 bit/11 byte keys # md5_128a
-# Testing  96-bit keys.......... ok.     # worst-bit:   0.732% error-ratio: 9.931546e-01
-ok 29 - Strict Avalanche Criteria - 96 bit/12 byte keys # md5_128a
-# Testing 104-bit keys.......... ok.     # worst-bit:   0.656% error-ratio: 1.011617e+00
-ok 30 - Strict Avalanche Criteria - 104 bit/13 byte keys # md5_128a
-# Testing 112-bit keys.......... ok.     # worst-bit:   0.590% error-ratio: 1.016782e+00
-ok 31 - Strict Avalanche Criteria - 112 bit/14 byte keys # md5_128a
-# Testing 120-bit keys.......... ok.     # worst-bit:   0.621% error-ratio: 1.000606e+00
-ok 32 - Strict Avalanche Criteria - 120 bit/15 byte keys # md5_128a
-# Testing 128-bit keys.......... ok.     # worst-bit:   0.620% error-ratio: 9.983822e-01
-ok 33 - Strict Avalanche Criteria - 128 bit/16 byte keys # md5_128a
-# Testing 136-bit keys.......... ok.     # worst-bit:   0.695% error-ratio: 9.925544e-01
-ok 34 - Strict Avalanche Criteria - 136 bit/17 byte keys # md5_128a
-# Testing 144-bit keys.......... ok.     # worst-bit:   0.609% error-ratio: 1.007346e+00
-ok 35 - Strict Avalanche Criteria - 144 bit/18 byte keys # md5_128a
-# Testing 152-bit keys.......... ok.     # worst-bit:   0.655% error-ratio: 9.886488e-01
-ok 36 - Strict Avalanche Criteria - 152 bit/19 byte keys # md5_128a
-# Testing 152-bit keys.......... ok.     # worst-bit:   0.650% error-ratio: 9.957326e-01
-ok 37 - Strict Avalanche Criteria - 152 bit/19 byte keys # md5_128a
-# Testing 200-bit keys.......... ok.     # worst-bit:   0.627% error-ratio: 1.003200e+00
-ok 38 - Strict Avalanche Criteria - 200 bit/25 byte keys # md5_128a
-# Testing 256-bit keys.......... ok.     # worst-bit:   0.694% error-ratio: 1.000711e+00
-ok 39 - Strict Avalanche Criteria - 256 bit/32 byte keys # md5_128a
-# Testing 520-bit keys.......... ok.     # worst-bit:   0.710% error-ratio: 1.005323e+00
-ok 40 - Strict Avalanche Criteria - 520 bit/65 byte keys # md5_128a
-# Testing 512-bit keys.......... ok.     # worst-bit:   0.694% error-ratio: 9.957317e-01
-ok 41 - Strict Avalanche Criteria - 512 bit/64 byte keys # md5_128a
-# Testing 1024-bit keys.......... ok.     # worst-bit:   0.682% error-ratio: 1.003112e+00
-ok 42 - Strict Avalanche Criteria - 1024 bit/128 byte keys # md5_128a
-# Testing 2048-bit keys.......... ok.     # worst-bit:   0.762% error-ratio: 1.000849e+00
-ok 43 - Strict Avalanche Criteria - 2048 bit/256 byte keys # md5_128a
+# Testing   0-bit keys.......... ok.     # worst-bit:   0.634% error-ratio: 9.957555e-01
+ok 17 - Strict Avalanche Criteria - 0 bit/0 byte keys # t1ha2_atonce128
+# Testing   8-bit keys.......... ok.     # worst-bit:   0.631% error-ratio: 1.022630e+00
+ok 18 - Strict Avalanche Criteria - 8 bit/1 byte keys # t1ha2_atonce128
+# Testing  16-bit keys.......... ok.     # worst-bit:   0.630% error-ratio: 9.836881e-01
+ok 19 - Strict Avalanche Criteria - 16 bit/2 byte keys # t1ha2_atonce128
+# Testing  24-bit keys.......... ok.     # worst-bit:   0.587% error-ratio: 9.896366e-01
+ok 20 - Strict Avalanche Criteria - 24 bit/3 byte keys # t1ha2_atonce128
+# Testing  32-bit keys.......... ok.     # worst-bit:   0.717% error-ratio: 1.011186e+00
+ok 21 - Strict Avalanche Criteria - 32 bit/4 byte keys # t1ha2_atonce128
+# Testing  40-bit keys.......... ok.     # worst-bit:   0.632% error-ratio: 1.001960e+00
+ok 22 - Strict Avalanche Criteria - 40 bit/5 byte keys # t1ha2_atonce128
+# Testing  48-bit keys.......... ok.     # worst-bit:   0.673% error-ratio: 1.030187e+00
+ok 23 - Strict Avalanche Criteria - 48 bit/6 byte keys # t1ha2_atonce128
+# Testing  56-bit keys.......... ok.     # worst-bit:   0.605% error-ratio: 9.938327e-01
+ok 24 - Strict Avalanche Criteria - 56 bit/7 byte keys # t1ha2_atonce128
+# Testing  64-bit keys.......... ok.     # worst-bit:   0.666% error-ratio: 1.007238e+00
+ok 25 - Strict Avalanche Criteria - 64 bit/8 byte keys # t1ha2_atonce128
+# Testing  72-bit keys.......... ok.     # worst-bit:   0.636% error-ratio: 1.011591e+00
+ok 26 - Strict Avalanche Criteria - 72 bit/9 byte keys # t1ha2_atonce128
+# Testing  80-bit keys.......... ok.     # worst-bit:   0.680% error-ratio: 9.964508e-01
+ok 27 - Strict Avalanche Criteria - 80 bit/10 byte keys # t1ha2_atonce128
+# Testing  88-bit keys.......... ok.     # worst-bit:   0.693% error-ratio: 1.016601e+00
+ok 28 - Strict Avalanche Criteria - 88 bit/11 byte keys # t1ha2_atonce128
+# Testing  96-bit keys.......... ok.     # worst-bit:   0.621% error-ratio: 9.894068e-01
+ok 29 - Strict Avalanche Criteria - 96 bit/12 byte keys # t1ha2_atonce128
+# Testing 104-bit keys.......... ok.     # worst-bit:   0.709% error-ratio: 1.007022e+00
+ok 30 - Strict Avalanche Criteria - 104 bit/13 byte keys # t1ha2_atonce128
+# Testing 112-bit keys.......... ok.     # worst-bit:   0.687% error-ratio: 9.907749e-01
+ok 31 - Strict Avalanche Criteria - 112 bit/14 byte keys # t1ha2_atonce128
+# Testing 120-bit keys.......... ok.     # worst-bit:   0.729% error-ratio: 1.000126e+00
+ok 32 - Strict Avalanche Criteria - 120 bit/15 byte keys # t1ha2_atonce128
+# Testing 128-bit keys.......... ok.     # worst-bit:   0.647% error-ratio: 9.985906e-01
+ok 33 - Strict Avalanche Criteria - 128 bit/16 byte keys # t1ha2_atonce128
+# Testing 136-bit keys.......... ok.     # worst-bit:   0.614% error-ratio: 9.868592e-01
+ok 34 - Strict Avalanche Criteria - 136 bit/17 byte keys # t1ha2_atonce128
+# Testing 144-bit keys.......... ok.     # worst-bit:   0.593% error-ratio: 1.011740e+00
+ok 35 - Strict Avalanche Criteria - 144 bit/18 byte keys # t1ha2_atonce128
+# Testing 152-bit keys.......... ok.     # worst-bit:   0.667% error-ratio: 9.993824e-01
+ok 36 - Strict Avalanche Criteria - 152 bit/19 byte keys # t1ha2_atonce128
+# Testing 152-bit keys.......... ok.     # worst-bit:   0.741% error-ratio: 9.831146e-01
+ok 37 - Strict Avalanche Criteria - 152 bit/19 byte keys # t1ha2_atonce128
+# Testing 200-bit keys.......... ok.     # worst-bit:   0.667% error-ratio: 1.001832e+00
+ok 38 - Strict Avalanche Criteria - 200 bit/25 byte keys # t1ha2_atonce128
+# Testing 256-bit keys.......... ok.     # worst-bit:   0.707% error-ratio: 9.950340e-01
+ok 39 - Strict Avalanche Criteria - 256 bit/32 byte keys # t1ha2_atonce128
+# Testing 520-bit keys.......... ok.     # worst-bit:   0.713% error-ratio: 1.000721e+00
+ok 40 - Strict Avalanche Criteria - 520 bit/65 byte keys # t1ha2_atonce128
+# Testing 512-bit keys.......... ok.     # worst-bit:   0.706% error-ratio: 9.998239e-01
+ok 41 - Strict Avalanche Criteria - 512 bit/64 byte keys # t1ha2_atonce128
+# Testing 1024-bit keys.......... ok.     # worst-bit:   0.701% error-ratio: 9.894434e-01
+ok 42 - Strict Avalanche Criteria - 1024 bit/128 byte keys # t1ha2_atonce128
+# Testing 2048-bit keys.......... ok.     # worst-bit:   0.771% error-ratio: 9.922315e-01
+ok 43 - Strict Avalanche Criteria - 2048 bit/256 byte keys # t1ha2_atonce128
 ### Keyset 'Cyclic' Tests ###
 # Keyset 'Cyclic' - 8 cycles of 16 bytes - 10000000 keys
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
@@ -191,7 +191,7 @@ ok 51 - Distribution Bias Check for Keyset 'Cyclic' - 8 cycles of 19 bytes - 100
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
 ok 52 - Collision Rate for Keyset 'Cyclic' - 8 cycles of 20 bytes - 10000000 keys
 ok 53 - Distribution Bias Check for Keyset 'Cyclic' - 8 cycles of 20 bytes - 10000000 keys
-ok 54 - Keyset 'Cyclic' # md5_128a
+ok 54 - Keyset 'Cyclic' # t1ha2_atonce128
 ### Keyset 'TwoBytes' Tests ###
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
 ok 55 - Collision Rate for Keyset 'TwoBytes' - up-to-4-byte keys, 652545 total keys
@@ -208,7 +208,7 @@ ok 62 - Distribution Bias Check for Keyset 'TwoBytes' - up-to-16-byte keys, 4425
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
 ok 63 - Collision Rate for Keyset 'TwoBytes' - up-to-20-byte keys, 86536545 total keys
 ok 64 - Distribution Bias Check for Keyset 'TwoBytes' - up-to-20-byte keys, 86536545 total keys
-ok 65 - Keyset 'TwoBytes' # md5_128a
+ok 65 - Keyset 'TwoBytes' # t1ha2_atonce128
 ### Keyset 'Sparse' Tests ###
 # Keyset 'Sparse' - 4096-bit keys with up to 2 bits set - 8390657 keys
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
@@ -254,174 +254,174 @@ ok 85 - Distribution Bias Check for Keyset 'Sparse' - 64-bit keys with up to 5 b
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
 ok 86 - Collision Rate for Keyset 'Sparse' - 96-bit keys with up to 4 bits set
 ok 87 - Distribution Bias Check for Keyset 'Sparse' - 96-bit keys with up to 4 bits set
-ok 88 - Keyset 'Sparse' # md5_128a
+ok 88 - Keyset 'Sparse' # t1ha2_atonce128
 ### Keyset 'Crc-MultiCollision' Tests ###
 # Keyset 'Crc(a)-MultiCollision' - 1048575 x 16 block keys - 128-bytes long - 10 seeds
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 89 - Collision Rate for Keyset 'Crc(a)-MultiCollision' - seed 1 # md5_128a
+ok 89 - Collision Rate for Keyset 'Crc(a)-MultiCollision' - seed 1 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 90 - Collision Rate for Keyset 'Crc(a)-MultiCollision' - seed 2 # md5_128a
+ok 90 - Collision Rate for Keyset 'Crc(a)-MultiCollision' - seed 2 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 91 - Collision Rate for Keyset 'Crc(a)-MultiCollision' - seed 3 # md5_128a
+ok 91 - Collision Rate for Keyset 'Crc(a)-MultiCollision' - seed 3 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 92 - Collision Rate for Keyset 'Crc(a)-MultiCollision' - seed 4 # md5_128a
+ok 92 - Collision Rate for Keyset 'Crc(a)-MultiCollision' - seed 4 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 93 - Collision Rate for Keyset 'Crc(a)-MultiCollision' - seed 5 # md5_128a
+ok 93 - Collision Rate for Keyset 'Crc(a)-MultiCollision' - seed 5 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 94 - Collision Rate for Keyset 'Crc(a)-MultiCollision' - seed 6 # md5_128a
+ok 94 - Collision Rate for Keyset 'Crc(a)-MultiCollision' - seed 6 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 95 - Collision Rate for Keyset 'Crc(a)-MultiCollision' - seed 7 # md5_128a
+ok 95 - Collision Rate for Keyset 'Crc(a)-MultiCollision' - seed 7 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 96 - Collision Rate for Keyset 'Crc(a)-MultiCollision' - seed 8 # md5_128a
+ok 96 - Collision Rate for Keyset 'Crc(a)-MultiCollision' - seed 8 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 97 - Collision Rate for Keyset 'Crc(a)-MultiCollision' - seed 9 # md5_128a
+ok 97 - Collision Rate for Keyset 'Crc(a)-MultiCollision' - seed 9 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 98 - Collision Rate for Keyset 'Crc(a)-MultiCollision' - seed 10 # md5_128a
+ok 98 - Collision Rate for Keyset 'Crc(a)-MultiCollision' - seed 10 # t1ha2_atonce128
 # Keyset 'Crc(b)-MultiCollision' - 1048575 x 16 block keys - 128-bytes long - 10 seeds
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 99 - Collision Rate for Keyset 'Crc(b)-MultiCollision' - seed 1 # md5_128a
+ok 99 - Collision Rate for Keyset 'Crc(b)-MultiCollision' - seed 1 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 100 - Collision Rate for Keyset 'Crc(b)-MultiCollision' - seed 2 # md5_128a
+ok 100 - Collision Rate for Keyset 'Crc(b)-MultiCollision' - seed 2 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 101 - Collision Rate for Keyset 'Crc(b)-MultiCollision' - seed 3 # md5_128a
+ok 101 - Collision Rate for Keyset 'Crc(b)-MultiCollision' - seed 3 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 102 - Collision Rate for Keyset 'Crc(b)-MultiCollision' - seed 4 # md5_128a
+ok 102 - Collision Rate for Keyset 'Crc(b)-MultiCollision' - seed 4 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 103 - Collision Rate for Keyset 'Crc(b)-MultiCollision' - seed 5 # md5_128a
+ok 103 - Collision Rate for Keyset 'Crc(b)-MultiCollision' - seed 5 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 104 - Collision Rate for Keyset 'Crc(b)-MultiCollision' - seed 6 # md5_128a
+ok 104 - Collision Rate for Keyset 'Crc(b)-MultiCollision' - seed 6 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 105 - Collision Rate for Keyset 'Crc(b)-MultiCollision' - seed 7 # md5_128a
+ok 105 - Collision Rate for Keyset 'Crc(b)-MultiCollision' - seed 7 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 106 - Collision Rate for Keyset 'Crc(b)-MultiCollision' - seed 8 # md5_128a
+ok 106 - Collision Rate for Keyset 'Crc(b)-MultiCollision' - seed 8 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 107 - Collision Rate for Keyset 'Crc(b)-MultiCollision' - seed 9 # md5_128a
+ok 107 - Collision Rate for Keyset 'Crc(b)-MultiCollision' - seed 9 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 108 - Collision Rate for Keyset 'Crc(b)-MultiCollision' - seed 10 # md5_128a
+ok 108 - Collision Rate for Keyset 'Crc(b)-MultiCollision' - seed 10 # t1ha2_atonce128
 ### Keyset 'Murmur2-MultiCollision' Tests ###
 # Keyset 'Murmur2-MultiCollision' - 1048575 x 16 block keys - 128-bytes long - 10 seeds
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 109 - Collision Rate for Keyset 'Murmur2-MultiCollision' - seed 1 # md5_128a
+ok 109 - Collision Rate for Keyset 'Murmur2-MultiCollision' - seed 1 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 110 - Collision Rate for Keyset 'Murmur2-MultiCollision' - seed 2 # md5_128a
+ok 110 - Collision Rate for Keyset 'Murmur2-MultiCollision' - seed 2 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 111 - Collision Rate for Keyset 'Murmur2-MultiCollision' - seed 3 # md5_128a
+ok 111 - Collision Rate for Keyset 'Murmur2-MultiCollision' - seed 3 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 112 - Collision Rate for Keyset 'Murmur2-MultiCollision' - seed 4 # md5_128a
+ok 112 - Collision Rate for Keyset 'Murmur2-MultiCollision' - seed 4 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 113 - Collision Rate for Keyset 'Murmur2-MultiCollision' - seed 5 # md5_128a
+ok 113 - Collision Rate for Keyset 'Murmur2-MultiCollision' - seed 5 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 114 - Collision Rate for Keyset 'Murmur2-MultiCollision' - seed 6 # md5_128a
+ok 114 - Collision Rate for Keyset 'Murmur2-MultiCollision' - seed 6 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 115 - Collision Rate for Keyset 'Murmur2-MultiCollision' - seed 7 # md5_128a
+ok 115 - Collision Rate for Keyset 'Murmur2-MultiCollision' - seed 7 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 116 - Collision Rate for Keyset 'Murmur2-MultiCollision' - seed 8 # md5_128a
+ok 116 - Collision Rate for Keyset 'Murmur2-MultiCollision' - seed 8 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 117 - Collision Rate for Keyset 'Murmur2-MultiCollision' - seed 9 # md5_128a
+ok 117 - Collision Rate for Keyset 'Murmur2-MultiCollision' - seed 9 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 118 - Collision Rate for Keyset 'Murmur2-MultiCollision' - seed 10 # md5_128a
+ok 118 - Collision Rate for Keyset 'Murmur2-MultiCollision' - seed 10 # t1ha2_atonce128
 ### Keyset 'Murmur3A-MultiCollision' Tests ###
 # Keyset 'Murmur3A-MultiCollision' - 1048575 x 16 block keys - 128-bytes long - 10 seeds
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 119 - Collision Rate for Keyset 'Murmur3A-MultiCollision' - seed 1 # md5_128a
+ok 119 - Collision Rate for Keyset 'Murmur3A-MultiCollision' - seed 1 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 120 - Collision Rate for Keyset 'Murmur3A-MultiCollision' - seed 2 # md5_128a
+ok 120 - Collision Rate for Keyset 'Murmur3A-MultiCollision' - seed 2 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 121 - Collision Rate for Keyset 'Murmur3A-MultiCollision' - seed 3 # md5_128a
+ok 121 - Collision Rate for Keyset 'Murmur3A-MultiCollision' - seed 3 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 122 - Collision Rate for Keyset 'Murmur3A-MultiCollision' - seed 4 # md5_128a
+ok 122 - Collision Rate for Keyset 'Murmur3A-MultiCollision' - seed 4 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 123 - Collision Rate for Keyset 'Murmur3A-MultiCollision' - seed 5 # md5_128a
+ok 123 - Collision Rate for Keyset 'Murmur3A-MultiCollision' - seed 5 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 124 - Collision Rate for Keyset 'Murmur3A-MultiCollision' - seed 6 # md5_128a
+ok 124 - Collision Rate for Keyset 'Murmur3A-MultiCollision' - seed 6 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 125 - Collision Rate for Keyset 'Murmur3A-MultiCollision' - seed 7 # md5_128a
+ok 125 - Collision Rate for Keyset 'Murmur3A-MultiCollision' - seed 7 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 126 - Collision Rate for Keyset 'Murmur3A-MultiCollision' - seed 8 # md5_128a
+ok 126 - Collision Rate for Keyset 'Murmur3A-MultiCollision' - seed 8 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 127 - Collision Rate for Keyset 'Murmur3A-MultiCollision' - seed 9 # md5_128a
+ok 127 - Collision Rate for Keyset 'Murmur3A-MultiCollision' - seed 9 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 128 - Collision Rate for Keyset 'Murmur3A-MultiCollision' - seed 10 # md5_128a
+ok 128 - Collision Rate for Keyset 'Murmur3A-MultiCollision' - seed 10 # t1ha2_atonce128
 ### Keyset 'Murmur3F-MultiCollision' Tests ###
 # Keyset 'Murmur3F-MultiCollision' - 1048575 x 16 block keys - 512-bytes long - 10 seeds
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 129 - Collision Rate for Keyset 'Murmur3F-MultiCollision' - seed 1 # md5_128a
+ok 129 - Collision Rate for Keyset 'Murmur3F-MultiCollision' - seed 1 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 130 - Collision Rate for Keyset 'Murmur3F-MultiCollision' - seed 2 # md5_128a
+ok 130 - Collision Rate for Keyset 'Murmur3F-MultiCollision' - seed 2 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 131 - Collision Rate for Keyset 'Murmur3F-MultiCollision' - seed 3 # md5_128a
+ok 131 - Collision Rate for Keyset 'Murmur3F-MultiCollision' - seed 3 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 132 - Collision Rate for Keyset 'Murmur3F-MultiCollision' - seed 4 # md5_128a
+ok 132 - Collision Rate for Keyset 'Murmur3F-MultiCollision' - seed 4 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 133 - Collision Rate for Keyset 'Murmur3F-MultiCollision' - seed 5 # md5_128a
+ok 133 - Collision Rate for Keyset 'Murmur3F-MultiCollision' - seed 5 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 134 - Collision Rate for Keyset 'Murmur3F-MultiCollision' - seed 6 # md5_128a
+ok 134 - Collision Rate for Keyset 'Murmur3F-MultiCollision' - seed 6 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 135 - Collision Rate for Keyset 'Murmur3F-MultiCollision' - seed 7 # md5_128a
+ok 135 - Collision Rate for Keyset 'Murmur3F-MultiCollision' - seed 7 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 136 - Collision Rate for Keyset 'Murmur3F-MultiCollision' - seed 8 # md5_128a
+ok 136 - Collision Rate for Keyset 'Murmur3F-MultiCollision' - seed 8 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 137 - Collision Rate for Keyset 'Murmur3F-MultiCollision' - seed 9 # md5_128a
+ok 137 - Collision Rate for Keyset 'Murmur3F-MultiCollision' - seed 9 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 138 - Collision Rate for Keyset 'Murmur3F-MultiCollision' - seed 10 # md5_128a
+ok 138 - Collision Rate for Keyset 'Murmur3F-MultiCollision' - seed 10 # t1ha2_atonce128
 ### Keyset 'City64-MultiCollision' Tests ###
 # Keyset 'City64-MultiCollision' - 10 x 2 block keys - 16-bytes long - 10 seeds
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 139 - Collision Rate for Keyset 'City64-MultiCollision' - seed 1 # md5_128a
+ok 139 - Collision Rate for Keyset 'City64-MultiCollision' - seed 1 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 140 - Collision Rate for Keyset 'City64-MultiCollision' - seed 2 # md5_128a
+ok 140 - Collision Rate for Keyset 'City64-MultiCollision' - seed 2 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 141 - Collision Rate for Keyset 'City64-MultiCollision' - seed 3 # md5_128a
+ok 141 - Collision Rate for Keyset 'City64-MultiCollision' - seed 3 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 142 - Collision Rate for Keyset 'City64-MultiCollision' - seed 4 # md5_128a
+ok 142 - Collision Rate for Keyset 'City64-MultiCollision' - seed 4 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 143 - Collision Rate for Keyset 'City64-MultiCollision' - seed 5 # md5_128a
+ok 143 - Collision Rate for Keyset 'City64-MultiCollision' - seed 5 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 144 - Collision Rate for Keyset 'City64-MultiCollision' - seed 6 # md5_128a
+ok 144 - Collision Rate for Keyset 'City64-MultiCollision' - seed 6 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 145 - Collision Rate for Keyset 'City64-MultiCollision' - seed 7 # md5_128a
+ok 145 - Collision Rate for Keyset 'City64-MultiCollision' - seed 7 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 146 - Collision Rate for Keyset 'City64-MultiCollision' - seed 8 # md5_128a
+ok 146 - Collision Rate for Keyset 'City64-MultiCollision' - seed 8 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 147 - Collision Rate for Keyset 'City64-MultiCollision' - seed 9 # md5_128a
+ok 147 - Collision Rate for Keyset 'City64-MultiCollision' - seed 9 # t1ha2_atonce128
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
-ok 148 - Collision Rate for Keyset 'City64-MultiCollision' - seed 10 # md5_128a
+ok 148 - Collision Rate for Keyset 'City64-MultiCollision' - seed 10 # t1ha2_atonce128
 ### Keyset 'Combination Lowbits' Tests ###
 # Keyset 'Combination' - up to 8 blocks from a set of 8 - 19173960 keys
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
 ok 149 - Collision Rate for Keyset 'Combination Lowbits'
 ok 150 - Distribution Bias Check for Keyset 'Combination Lowbits'
-ok 151 - Keyset 'Combination Lowbits' # md5_128a
+ok 151 - Keyset 'Combination Lowbits' # t1ha2_atonce128
 ### Keyset 'Combination Highbits' Tests ###
 # Keyset 'Combination' - up to 8 blocks from a set of 8 - 19173960 keys
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
 ok 152 - Collision Rate for Keyset 'Combination Highbits'
 ok 153 - Distribution Bias Check for Keyset 'Combination Highbits'
-ok 154 - Keyset 'Combination Highbits' # md5_128a
+ok 154 - Keyset 'Combination Highbits' # t1ha2_atonce128
 ### Keyset 'Combination Highbits2' Tests ###
 # Keyset 'Combination' - up to 8 blocks from a set of 8 - 19173960 keys
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
 ok 155 - Collision Rate for Keyset 'Combination Highbits2'
 ok 156 - Distribution Bias Check for Keyset 'Combination Highbits2'
-ok 157 - Keyset 'Combination Highbits2' # md5_128a
+ok 157 - Keyset 'Combination Highbits2' # t1ha2_atonce128
 ### Keyset 'Combination HiBit-Null' Tests ###
 # Keyset 'Combination' - up to 20 blocks from a set of 2 - 2097150 keys
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
 ok 158 - Collision Rate for Keyset 'Combination HiBit-Null'
 ok 159 - Distribution Bias Check for Keyset 'Combination HiBit-Null'
-ok 160 - Keyset 'Combination HiBit-Null' # md5_128a
+ok 160 - Keyset 'Combination HiBit-Null' # t1ha2_atonce128
 ### Keyset 'Combination LowBit-Null' Tests ###
 # Keyset 'Combination' - up to 20 blocks from a set of 2 - 2097150 keys
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
 ok 161 - Collision Rate for Keyset 'Combination LowBit-Null'
 ok 162 - Distribution Bias Check for Keyset 'Combination LowBit-Null'
-ok 163 - Keyset 'Combination LowBit-Null' # md5_128a
+ok 163 - Keyset 'Combination LowBit-Null' # t1ha2_atonce128
 ### Keyset 'Combination Hi-Lo' Tests ###
 # Keyset 'Combination' - up to 6 blocks from a set of 15 - 12204240 keys
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
 ok 164 - Collision Rate for Keyset 'Combination Hi-Lo'
 ok 165 - Distribution Bias Check for Keyset 'Combination Hi-Lo'
-ok 166 - Keyset 'Combination Hi-Lo' # md5_128a
+ok 166 - Keyset 'Combination Hi-Lo' # t1ha2_atonce128
 ### Keyset 'Text' Tests ###
 # Keyset 'Text' - keys of form "Foo[XXXX]Bar" - 14776336 keys
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
@@ -435,7 +435,7 @@ ok 170 - Distribution Bias Check for Keyset 'Text' - keys of form "FooBar[XXXX]"
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
 ok 171 - Collision Rate for Keyset 'Text' - keys of form "[XXXX]FooBar" - 14776336 keys
 ok 172 - Distribution Bias Check for Keyset 'Text' - keys of form "[XXXX]FooBar" - 14776336 keys
-ok 173 - Keyset 'Text' # md5_128a
+ok 173 - Keyset 'Text' # t1ha2_atonce128
 ### Keyset 'Zeroes' Tests ###
 # Keyset 'Zeroes' - 262144 keys, zero seed
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
@@ -445,7 +445,7 @@ ok 175 - Distribution Bias Check for Keyset 'Zeroes' - 262144 keys, zero seed
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
 ok 176 - Collision Rate for Keyset 'Zeroes' - 262144 keys, nonzero seed
 ok 177 - Distribution Bias Check for Keyset 'Zeroes' - 262144 keys, nonzero seed
-ok 178 - Keyset 'Zeroes' # md5_128a
+ok 178 - Keyset 'Zeroes' # t1ha2_atonce128
 ### Keyset 'Seed' Tests ###
 # Keyset 'Seed' - 2000000 seeds, Key "The quick brown fox "...
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
@@ -463,7 +463,7 @@ ok 184 - Distribution Bias Check for Keyset 'Seed' - 2000000 seeds, Key "0010110
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
 ok 185 - Collision Rate for Keyset 'Seed' - 2000000 seeds, Key "abcbcddbdebdcaaabaaa"...
 ok 186 - Distribution Bias Check for Keyset 'Seed' - 2000000 seeds, Key "abcbcddbdebdcaaabaaa"...
-ok 187 - Keyset 'Seed' # md5_128a
+ok 187 - Keyset 'Seed' # t1ha2_atonce128
 ### Keyset 'Effs' Tests ###
 # Keyset 'Effs' - 262144 keys, zero seed
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
@@ -473,14 +473,14 @@ ok 189 - Distribution Bias Check for Keyset 'Effs' - 262144 keys, zero seed
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
 ok 190 - Collision Rate for Keyset 'Effs' - 262144 keys, nonzero seed
 ok 191 - Distribution Bias Check for Keyset 'Effs' - 262144 keys, nonzero seed
-ok 192 - Keyset 'Effs' # md5_128a
+ok 192 - Keyset 'Effs' # t1ha2_atonce128
 ### Keyset 'Words' Tests ###
 # Hashed 99171 keys from 297513 words from file '/usr/share/dict/words'
 # Testing collisions   - Expected     0.00, actual        0 ( 0.00x) - passed
 ok 193 - Collision Rate for Keyset 'Words'
 ok 194 - Distribution Bias Check for Keyset 'Words'
-ok 195 - all tests passed # md5_128a
+ok 195 - all tests passed # t1ha2_atonce128
 1..195
-# All Tests Passed. md5_128a passed all 195 tests run.
-# Testing took 10078.296395 seconds
+# All Tests Passed. t1ha2_atonce128 passed all 195 tests run.
+# Testing took 3849.145349 seconds
 # This is SMHasher version v1.3-demerphq-33-g88c4f88 - built on Mar 12 2018.
